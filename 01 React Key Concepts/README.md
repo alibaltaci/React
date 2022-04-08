@@ -1,6 +1,7 @@
 # React Key Concepts
 
 ## Declerative vs Imperative
+---
 
 Programlama paradigmaları temel bir kodlama stilidir. Çok kullanılan **4 tane programlama paradigması var**; 
 * object-oriented, 
@@ -40,7 +41,24 @@ console.log(doubled); // => [2,4,6,8,10]
 ```
 
 * ES6+ ile gelen JS özellikleri Declerative ve Functional özelliktedir.
-
+---
 * *https://medium.com/frontend-development-with-js/imperative-declarative-programlama-242e3dce26e#:~:text=Imperative%20T%C3%BCrk%C3%A7ede%20emir%2C%20buyruk%2C%20zorunluluk,anlatt%C4%B1%C4%9F%C4%B1n%20programlama%20%C5%9Fekli%20olarak%20tan%C4%B1ml%C4%B1yorlar.*
 
 * *https://mehmetkose.com.tr/tr/blog/declarative-imperative-farki/*
+---
+
+## Components Architecture (bileşen mimarisi)
+---
+Değiştirilebilir bileşenlere dayalı bir mimaridir . Bileşen Mimarileri bağımsız, değiştirilebilir, modüler bileşenlere dayandığından, karmaşıklığın yönetilmesine ve yeniden kullanımın teşvik edilmesine yardımcı olur.
+
+Bileşen tabanlı mimarinin değer önerisi, uygulama geliştirme süresini artırması ve kod parçalanmasını azaltmasıdır.
+
+Daha büyük bir kullanıcı arayüzünün (diğer bir deyişle bileşenler) tek tek parçalarını kendi kendini idame ettiren, bağımsız mikro sistemlere kapsüllemek için bir yöntem.
+
+
+**React Developer Tools Eklentisi** 
+* *https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi*
+
+Bu eklenti uygulamada oluşturdupumuz bileşenleri (components) görmemizi sağlar.
+
+* *https://swi.cs.vsb.cz/RUPSmall/core.base_rup/guidances/supportingmaterials/use_component_architectures_CBC2F6B5.html#:~:text=A%20Component%20Architecture%20is%20an,complexity%20and%20encourage%20re%2Duse.*
