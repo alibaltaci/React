@@ -6,6 +6,33 @@
 * **Declarative** ise bildiren, açıklayan anlamındadır. 
 * Yabancılar ise *imperative* işlemi nasıl yapacağını anlattığın, *declarative* ise ne yapacağını anlattığın programlama şekli olarak tanımlıyorlar.
 
-* https://medium.com/frontend-development-with-js/imperative-declarative-programlama-242e3dce26e#:~:text=Imperative%20T%C3%BCrk%C3%A7ede%20emir%2C%20buyruk%2C%20zorunluluk,anlatt%C4%B1%C4%9F%C4%B1n%20programlama%20%C5%9Fekli%20olarak%20tan%C4%B1ml%C4%B1yorlar.
+**Javascript Örneği**
 
-* https://mehmetkose.com.tr/tr/blog/declarative-imperative-farki/
+*Declarative*
+```
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map((n) => {
+  return n * 2;
+});
+
+console.log(doubled); // => [2,4,6,8,10]
+```
+
+*Imperative*
+```
+const numbers = [1, 2, 3, 4, 5];
+const doubled = [];
+ 
+for (let i = 0; i < numbers.length; i += 1) {
+  const newNumber = numbers[i] * 2;
+  doubled.push(newNumber);
+}
+
+console.log(doubled); // => [2,4,6,8,10]
+```
+
+* ES6+ ile gelen JS özellikleri Declerative ve Functional özelliktedir.
+
+* *https://medium.com/frontend-development-with-js/imperative-declarative-programlama-242e3dce26e#:~:text=Imperative%20T%C3%BCrk%C3%A7ede%20emir%2C%20buyruk%2C%20zorunluluk,anlatt%C4%B1%C4%9F%C4%B1n%20programlama%20%C5%9Fekli%20olarak%20tan%C4%B1ml%C4%B1yorlar.*
+
+* *https://mehmetkose.com.tr/tr/blog/declarative-imperative-farki/*
