@@ -2,6 +2,14 @@
 
 ## Declerative vs Imperative
 
+Programlama paradigmaları temel bir kodlama stilidir. Çok kullanılan **4 tane programlama paradigması var**; 
+* object-oriented, 
+* imperative, 
+* declarative, 
+* fonksiyonel (declarative programlamanın bir alt kümesi olarak görülebilir).
+
+---
+
 * **Imperative** Türkçede emir, buyruk, zorunluluk anlamına geliyor. 
 * **Declarative** ise bildiren, açıklayan anlamındadır. 
 * Yabancılar ise *imperative* işlemi nasıl yapacağını anlattığın, *declarative* ise ne yapacağını anlattığın programlama şekli olarak tanımlıyorlar.
