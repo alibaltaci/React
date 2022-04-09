@@ -1,7 +1,7 @@
 # React Key Concepts
 
 ## Declerative vs Imperative
----
+
 
 Programlama paradigmaları temel bir kodlama stilidir. Çok kullanılan **4 tane programlama paradigması var**; 
 * object-oriented, 
@@ -48,7 +48,7 @@ console.log(doubled); // => [2,4,6,8,10]
 ---
 
 ## Components Architecture (bileşen mimarisi)
----
+
 Değiştirilebilir bileşenlere dayalı bir mimaridir . Bileşen Mimarileri bağımsız, değiştirilebilir, modüler bileşenlere dayandığından, karmaşıklığın yönetilmesine ve yeniden kullanımın teşvik edilmesine yardımcı olur.
 
 Bileşen tabanlı mimarinin değer önerisi, uygulama geliştirme süresini artırması ve kod parçalanmasını azaltmasıdır.
@@ -62,3 +62,16 @@ Daha büyük bir kullanıcı arayüzünün (diğer bir deyişle bileşenler) tek
 Bu eklenti uygulamada oluşturdupumuz bileşenleri (components) görmemizi sağlar.
 
 * *https://swi.cs.vsb.cz/RUPSmall/core.base_rup/guidances/supportingmaterials/use_component_architectures_CBC2F6B5.html#:~:text=A%20Component%20Architecture%20is%20an,complexity%20and%20encourage%20re%2Duse.*
+---
+
+## One Way Data Flow (Tek Yönlü Veri Akışı)
+
+**Virtual DOM**
+
+Gerçek DOM’a karşılık gelen sanal bir DOM nesnesidir, yani render edilen DOM’un bir kopyasıdır. React her state değişikliğinde render edilen gerçek DOM’u bütünüyle tekrar oluşturmak yerine, state değişikliğini Virtual DOM’a yansıtmaktadır. Bu sayede gerçek DOM ile ve yeni sanal(virtual) DOM arasındaki farklılıkları tespit ederek, gerçek DOM’da yapılacak değişikleri hesaplar ve tek seferde sadece gerçek DOM’da değişen elemanları yeniden render eder. 
+
+* *https://medium.com/@muratbalci1/virtual-dom-nedir-8e3c95dcde5c*
+
+* *https://medium.com/kodcular/vi%CC%87rtual-dom-nedi%CC%87r-react-i%CC%87le-kullanimi-9cfdee76adad*
+
+## UI Library 
