@@ -80,3 +80,7 @@ Gerçek DOM’a karşılık gelen sanal bir DOM nesnesidir, yani render edilen D
 ---
 
 ## UI Library 
+
+- React 360 --> VR 
+
+- Electron - React Desktop --> Masaüstü uygulamaları için.
