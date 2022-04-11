@@ -84,3 +84,15 @@ Gerçek DOM’a karşılık gelen sanal bir DOM nesnesidir, yani render edilen D
 - React 360 --> VR 
 
 - Electron - React Desktop --> Masaüstü uygulamaları için.
+
+---
+
+## React Concepts Summary
+
+1. Don't touch the DOM. I'll do it.
+
+2. Build websites like lego blocks.
+
+3. Unidirectional data flow (One way data flow).
+
+4. UI, The rest is up to you.
