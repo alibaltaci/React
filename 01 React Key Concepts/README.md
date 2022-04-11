@@ -66,6 +66,10 @@ Bu eklenti uygulamada oluşturdupumuz bileşenleri (components) görmemizi sağl
 
 ## One Way Data Flow (Tek Yönlü Veri Akışı)
 
+Tek yönlü veri akışı, esas olarak işlevsel reaktif programlamada bulunan bir tekniktir. Verilerin uygulamanın diğer bölümlerine aktarılması için yalnızca bir yolu olduğu anlamına gelir. Temelde bu, alt bileşenlerin üst bileşenden gelen verileri güncelleyemediği anlamına gelir. React'te bir ebeveynden gelen verilere props adı verilir. Angular, veri akışının her iki yönde gerçekleştiği çift yönlü bağlamayı kullanır. React, temiz bir veri akışı mimarisi izlediğinizden emin olmak için çift yönlü bağlamayı desteklemez. Bu yaklaşımın en büyük yararı, verilerin uygulamanız boyunca tek bir yönde akması ve size uygulama üzerinde daha iyi kontrol sağlamasıdır.
+
+https://www.geeksforgeeks.org/unidirectional-data-flow/
+
 **Virtual DOM**
 
 Gerçek DOM’a karşılık gelen sanal bir DOM nesnesidir, yani render edilen DOM’un bir kopyasıdır. React her state değişikliğinde render edilen gerçek DOM’u bütünüyle tekrar oluşturmak yerine, state değişikliğini Virtual DOM’a yansıtmaktadır. Bu sayede gerçek DOM ile ve yeni sanal(virtual) DOM arasındaki farklılıkları tespit ederek, gerçek DOM’da yapılacak değişikleri hesaplar ve tek seferde sadece gerçek DOM’da değişen elemanları yeniden render eder. 
@@ -73,5 +77,6 @@ Gerçek DOM’a karşılık gelen sanal bir DOM nesnesidir, yani render edilen D
 * *https://medium.com/@muratbalci1/virtual-dom-nedir-8e3c95dcde5c*
 
 * *https://medium.com/kodcular/vi%CC%87rtual-dom-nedi%CC%87r-react-i%CC%87le-kullanimi-9cfdee76adad*
+---
 
 ## UI Library 
