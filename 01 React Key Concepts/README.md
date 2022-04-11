@@ -96,3 +96,13 @@ Gerçek DOM’a karşılık gelen sanal bir DOM nesnesidir, yani render edilen D
 3. Unidirectional data flow (One way data flow).
 
 4. UI, The rest is up to you.
+
+---
+
+## The Job of a React Developer 
+
+1. Decide on components.
+
+2. Decide the state and where it lives.
+
+3. What changes when state changes.
