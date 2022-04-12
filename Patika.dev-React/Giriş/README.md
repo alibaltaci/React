@@ -28,6 +28,37 @@ Bu kopya React tarafında bir JS objesi olarak tutulur.
 
 * React her state değişikliğinde render edilen Real DOM’u bütünüyle tekrar oluşturmak yerine, state değişikliğini Virtual DOM’a yansıtmaktadır. Bu sayede Real DOM ile virtual DOM arasındaki farklılıkları tespit ederek, Real DOM’da yapılacak değişikleri hesaplar ve tek seferde sadece Real DOM’da değişen elemanları yeniden render eder. 
 
+---
+
+# NODE JS
+
+* Node js Kurulum işlemleri
+
+* cmd --> npm init (modül oluşturmak için)
+
+* index.js
+
+* cmd --> node index.js (index dosyasını çalıştırmak için)
+
+---
+
+# Axios (Fetch yerine)
+
+* axios kütüphanesi node-fetch kütüphanesi yerine kullanılabilir.
+
+* Fetch 'e göre daha kolaydır.
+
+* axios 'da json işlemi yapmaya gerek yoktur.
+
+## Axios kurulum
+
+cmd --> npm install axios
+
+js --> import axios from "axios"; 
+
+--> axios(url); --> bu bize data isminde bir data döner.
+
+
 
 
 
