@@ -139,6 +139,28 @@ Promise, callback’lerin sıkıntılı yönlerini düzeltmek amacıyla önerilm
 
 https://medium.com/codefiction/javascriptte-promise-kullan%C4%B1m%C4%B1-ccca1123989a
 
+---
+
+# Array Functions 
+
+* bkz. --> array-functions.js
+
+* push
+
+* map 
+
+* find (aynı koşulu sağlayan birden fazla eleman varsa ilk bulduğunu döner)
+
+* filter (Koşulu sağlayan tüm elemanları döner)
+
+* some (koşulun sağlanıp sağlanamama durumuna göre true-false döner)
+
+* every (koşulun tüm array elemanları için sağlanıp sağlanmamasına göre true-false döner)
+
+* includes (aranan değer array 'in içinde var mı? yok mu?)
+
+
+
 
 
 
