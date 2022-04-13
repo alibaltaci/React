@@ -1,4 +1,4 @@
-# React Nedir Ne Zaman İhtiyaç Duyarız?
+# React Nedir? Ne Zaman İhtiyaç Duyarız?
 
 React kullanıcı arayüzleri oluşturmak için kullanılabilecek bir JavaScript kütüphanesidir.
 
@@ -105,10 +105,39 @@ js --> import axios from "axios";
 
 --> axios(url); --> bu bize data isminde bir data döner.
 
+## **Promise vs Callback**
 
+Callback, en basit haliyle herhangi bir fonksiyona parametre olarak verdiğimiz ve sonra geri çağıracağımız fonksiyonlara denir.
 
+### **Callback 'de yaşanabilcek sorunlar**
 
+* Callback’in beklenenden erken çağırılması
 
+* Callback’in hiç çağırılmaması
+
+* Callback’in beklenilenden az veya çok çağırılması
+
+* Gerekli parametreleri doğru bir şekilde alamaması
+
+* Hataların yutulması
+
+### **Promise faydaları**
+
+Promise, callback’lerin sıkıntılı yönlerini düzeltmek amacıyla önerilmiş bir yapıdır. 
+
+* Promise istenilen görevi yerine getirdiğinde değeri değişmez (immutable)
+
+* Sadece bir kere başarıya (resolved) ulaşır, veya başarısız (rejected) olur.
+
+* Öngörülemeyen hatalar otomatik olarak Promise’i başarısız (rejected) sonuca götürür. Bu da hataları kontrol etme noktasında faydalıdır.
+
+* Yapısı gereği, gelecekteki bir değerin göstergesi olduğundan daha güvenilirdir.
+
+### **Promise.all**
+
+ Bu metodun kullanılma amacını, paralel olarak gerçekleştirilen asenkron işlemlerin hepsinin bitip, bitmediği anlamak olarak tanımlayabiliriz. Birbirini beklemeyen asenkron işlemleri (promise’leri) zincirlersek toplam gerçekleşme süresini uzatmış oluruz. Hem bekleyen tüm işlemlerin bittiğinden emin olmak hem de bunu promise kullanarak yapabilmek Promise.all() ile mümkün. Dizideki tüm promise’ler başarılı(resolved) olduğunda tuttukları değerler de dizi halinde kullanıcıya döner. Eğer dizideki herhangi bir promise başarısız(rejected) olursa, Promise.all() sonucu oluşan promise de başarısız(rejected) olur.
+
+https://medium.com/codefiction/javascriptte-promise-kullan%C4%B1m%C4%B1-ccca1123989a
 
 
 

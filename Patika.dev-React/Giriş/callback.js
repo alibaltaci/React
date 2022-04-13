@@ -1,3 +1,4 @@
+import axios from "axios";
 import fetch from "node-fetch";
 
 // fetch("https://jsonplaceholder.typicode.com/users")
@@ -56,18 +57,112 @@ import fetch from "node-fetch";
 // Data ifadesini alabilmek için { data } şeklinde kullanılablir.
 // { data: newName } şeklinde yeniden isimlendirilebilir.
 
-import axios from "axios";
+// import axios from "axios";
 
-(async () =>{
-    const { data: users } = await axios("https://jsonplaceholder.typicode.com/users");
+// (async () =>{
+//     const { data: users } = await axios("https://jsonplaceholder.typicode.com/users");
 
-    const { data: post1} = await axios("https://jsonplaceholder.typicode.com/posts/1");
+//     const { data: post1} = await axios("https://jsonplaceholder.typicode.com/posts/1");
 
-    const { data: post2} = await axios("https://jsonplaceholder.typicode.com/posts/2");
+//     const { data: post2} = await axios("https://jsonplaceholder.typicode.com/posts/2");
 
-    console.log("Users", users);
-    console.log("Post1", post1);
-    console.log("Post2", post2);
-})
-();
+//     console.log("Users", users);
+//     console.log("Post1", post1);
+//     console.log("Post2", post2);
+// })
+// ();
 
+
+// Promises
+
+// const getComments = () => {
+
+//     return new Promise((resolve, reject) => {
+
+//         resolve("comments");
+//     });
+// }
+ 
+// getComments()
+// .then( (response) => console.log(response))
+// .catch( (e) => console.log(e))
+
+
+// Promises, async - await ve axios kullanarak
+
+const getUsers = () => {
+
+    return new Promise( async (resolve, reject) => {
+
+        const { data } = await axios("https://jsonplaceholder.typicode.com/users");
+
+        resolve(data);
+
+        reject("Users 'da bir sorun oluştu...");
+    });
+}
+
+// getUsers()
+// .then( data => console.log(data))
+// .catch(e => console.log(e));
+
+
+const getPosts = (post_id) => {
+
+    return new Promise( async (resolve, reject) => {
+
+        const { data } = await axios("https://jsonplaceholder.typicode.com/posts/" + post_id);
+
+        resolve(data);
+
+        reject("Posts 'da bir sorun oluştu...");
+    })
+}
+
+// getPosts(98)
+// .then(response => console.log(response))
+// .catch(e => console.log(e));
+
+
+// Yukarıdaki getUsers ve getPost fonksiyonlarını sıraya koymak istediğimizi varsayalım
+// anonim fonksiyon ile bunu yapalım.
+
+// ( async () => {
+
+//     await getUsers()
+//     .then( data => console.log(data))
+//     .catch(e => console.log(e));
+
+//     await getPosts(42)
+//     .then(response => console.log(response))
+//     .catch(e => console.log(e));
+
+// })();
+
+
+// then ve catch 'den kurtularak aynı fonksiyonu tanımlayalım
+// hatayı yakalama için try catch yöntemini kullanalım.
+
+// ( async () => {
+
+//     try {
+//         const users = await getUsers();
+
+//         const posts = await getPosts(24);
+    
+//         console.log(users);
+//         console.log(posts);
+
+//     } catch(e) {
+
+//         console.log(e);
+//     }
+
+// })();
+
+
+// Promise.all ile fonksiyonlarımızı çalıştıralım.
+
+Promise.all([getUsers(), getPosts(42)])
+.then(response => console.log(response))
+.catch(e => console.log(e));
