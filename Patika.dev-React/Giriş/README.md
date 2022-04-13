@@ -54,8 +54,17 @@ Bu kopya React tarafında bir JS objesi olarak tutulur.
 
 # Callback Function / Async - Await
 
-callback.js
+* callback.js
 
+* node 'da fetch olmadığı için node-fetch kütüphanesini indirmemiz gerek.
+
+* cmd --> npm i node-fetch 
+
+* Callback foksiyolar işlemleri sıraya koymak için kullanılır.
+
+* Async - Await yapısı callback 'de ortaya çıkabilecek karışıklıkları önlemek ve daha okunur kodlar yazmak için kullanılır.
+
+* Anonim fonksiyon: Fonksiyon tanımlamadan işlemleri yapabilmek için kullanılan bir yontem. --> ()();
 
 # Axios (Fetch yerine)
 
