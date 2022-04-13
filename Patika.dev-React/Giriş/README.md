@@ -42,6 +42,14 @@ Bu kopya React tarafında bir JS objesi olarak tutulur.
 
 ---
 
+# ES6 Modül Sistemi
+
+* Modül import etmek için require yerine import kullanılabilir.
+
+        Bunun için; package.json --> "type":"module" tanımını yapmamız gerekir.
+
+* my-module.js 
+
 # Axios (Fetch yerine)
 
 * axios kütüphanesi node-fetch kütüphanesi yerine kullanılabilir.
