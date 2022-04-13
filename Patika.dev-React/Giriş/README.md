@@ -50,6 +50,13 @@ Bu kopya React tarafında bir JS objesi olarak tutulur.
 
 * my-module.js 
 
+---
+
+# Callback Function / Async - Await
+
+callback.js
+
+
 # Axios (Fetch yerine)
 
 * axios kütüphanesi node-fetch kütüphanesi yerine kullanılabilir.
