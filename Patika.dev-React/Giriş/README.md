@@ -66,15 +66,38 @@ Bu kopya React tarafında bir JS objesi olarak tutulur.
 
 * Anonim fonksiyon: Fonksiyon tanımlamadan işlemleri yapabilmek için kullanılan bir yontem. --> ()();
 
-# Axios (Fetch yerine)
+---
+
+# Promises
+
+## Axios (Fetch yerine)
 
 * axios kütüphanesi node-fetch kütüphanesi yerine kullanılabilir.
+
+* React 'te bunu kullanacağız.
 
 * Fetch 'e göre daha kolaydır.
 
 * axios 'da json işlemi yapmaya gerek yoktur.
 
-## Axios kurulum
+* axios bize bir obje döner ve bu obje altında asıl ulaşmak istediğimiz kısım data adı altında yer almakadır.
+
+                  data: [
+                                {
+                                id: 1,
+                                name: 'Leanne Graham',
+                                username: 'Bret',
+                                email: 'Sincere@april.biz',
+                                address: [Object],
+                                phone: '1-770-736-8031 x56442',
+                                website: 'hildegard.org',
+                                company: [Object]
+                                }
+                        ]
+
+* Bu datayı çekebilmek için { data } şeklinde bir kullanım yapılmalıdır. --> bkz. callback.js
+
+### **Axios kurulum**
 
 cmd --> npm install axios
 
