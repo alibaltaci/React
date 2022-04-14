@@ -85,7 +85,15 @@ Web projeleri için kullanılır. Mobil uygulamalar için gereksiz olduğu için
 
     --> class --> className
 
+# Componentlerde Değişken Render Etmek
 
+* {} içine değişken yazılarak render edilebilir.
+
+# Koşullu Render İşlemi
+
+* && if yerine kullanılabilir.
+
+* ?  (short if) true - false durumu tek satırda yazılabilir. 
 
 
 
