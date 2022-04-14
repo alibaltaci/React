@@ -56,4 +56,21 @@
 
 # Component Oluşturmak - Kullanmak
 
+* Oluşturacağımız bütün componentleri `hello-react --> src --> app.js --> app()` altında birleştireceğiz.
+
+* Bu kökdizin bize kurulum sırasında otomatik olarak oluşturulur.
+
+* app() bizim ana componentimiz olacak.
+
+* `src--> index.js --> react-dom/client` kütüphanesi normal react kütphanesinden ayrılarak oluşturlmuş bir kütüphanedir.
+Web projeleri için kullanılır. Mobil uygulamalar için gereksiz olduğu için ana kütüphaneden ayrılmıştır.
+
+### **Kendimiz bir component oluşturup kullanmaya çalışalım**
+
+`src --> components --> header.js` klasör ve js dosyası oluştur.
+
+* Tanımlanan fonksiyonu `src --> app.js` 'de indir ve çalıştır. bkz. app.js
+
+
+
 
