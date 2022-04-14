@@ -62,6 +62,8 @@
 
 * app() bizim ana componentimiz olacak.
 
+* Component oluştururken react 'in html etiketleri ile ayırt edebilmesi için ilk harfi büyük olarak yazılmalıdır.
+
 * `src--> index.js --> react-dom/client` kütüphanesi normal react kütphanesinden ayrılarak oluşturlmuş bir kütüphanedir.
 Web projeleri için kullanılır. Mobil uygulamalar için gereksiz olduğu için ana kütüphaneden ayrılmıştır.
 
@@ -70,6 +72,19 @@ Web projeleri için kullanılır. Mobil uygulamalar için gereksiz olduğu için
 `src --> components --> header.js` klasör ve js dosyası oluştur.
 
 * Tanımlanan fonksiyonu `src --> app.js` 'de indir ve çalıştır. bkz. app.js
+
+# JSX ve Temel Kuralları
+
+* HTML yazar gibi JS yazmamıza olanak sağlar.
+
+* Componentler kapsayıcı bir etikete sahip olmalıdır.
+
+* JSX yazarken özel tanımlı key word 'leri kullanmamamız gerekir. (if, for, class ...)
+
+    --> for --> htmlFor
+
+    --> class --> className
+
 
 
 
