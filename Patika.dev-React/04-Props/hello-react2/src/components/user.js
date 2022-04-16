@@ -1,3 +1,6 @@
+import PropTypes from "prop-types";
+
+
 function User( {name, surname, isLoggedIn, friends} ) {   // user(props) user( {name, surname, isLoggedIn} ) olarak da değerler alınabilir.
 
     // console.log(props);
@@ -31,6 +34,13 @@ function User( {name, surname, isLoggedIn, friends} ) {   // user(props) user( {
             }
         </>
     );
+}
+
+User.propTypes = {
+    name: PropTypes.string,
+    surnamename: PropTypes.string,
+    isLoggedIn: PropTypes.bool,
+    friends: PropTypes.array,
 }
 
 export default User
