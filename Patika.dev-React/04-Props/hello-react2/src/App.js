@@ -30,6 +30,10 @@ function App() {
         age={27}
         // friends={["Ahmet", "İbrahim", "Deniz"]}
         friends={friends}
+        address= {{
+          title: "Ataşehir/İstanbul",
+          zip: 34755
+        }}
         />
 
       </header>

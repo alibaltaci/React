@@ -43,3 +43,21 @@ Zorunlu tutmak için
             PropTypes.number,
             PropTypes.string
         ]).isRequired
+
+# Shape
+
+* Obje olarak gönderdiğimiz property 'lerde kullanılır.
+
+Prop:
+
+        address= {{
+          title: "Ataşehir/İstanbul",
+          zip: 34755
+        }}
+
+Shape:
+
+        address: PropTypes.shape({
+            title: PropTypes.string,
+            zip: PropTypes.number
+        })

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 
-function User( {name, surname, isLoggedIn, friends} ) {   // user(props) user( {name, surname, isLoggedIn} ) olarak da değerler alınabilir.
+function User( {name, surname, isLoggedIn, friends, address} ) {   // user(props) user( {name, surname, isLoggedIn} ) olarak da değerler alınabilir.
 
     // console.log(props);
     // console.log(name, surname, isLoggedIn, friends);
@@ -34,19 +34,33 @@ function User( {name, surname, isLoggedIn, friends} ) {   // user(props) user( {
 
                 </div>)
             }
+
+            <br/>
+
+            {address.title} {address.zip}
         </>
     );
 }
 
-User.propTypes = {
+User.propTypes = { 
+
     name: PropTypes.string.isRequired,
+
     surname: PropTypes.string.isRequired,
+    
     isLoggedIn: PropTypes.bool.isRequired,
+    
     age: PropTypes.oneOfType([
         PropTypes.number,
         PropTypes.string
     ]).isRequired,
+    
     friends: PropTypes.array,
+    
+    address: PropTypes.shape({
+        title: PropTypes.string,
+        zip: PropTypes.number
+    })
 }
 
 export default User
