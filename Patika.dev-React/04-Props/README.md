@@ -61,3 +61,11 @@ Shape:
             title: PropTypes.string,
             zip: PropTypes.number
         })
+
+# Default Props 
+
+Herhangi bir tanım yapılmamış prop 'a varsayılan (default) bir değer vermek için kullanılır.
+
+    User.defaultProps = {
+        isLoggedIn: false
+    }

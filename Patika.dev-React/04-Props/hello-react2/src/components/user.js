@@ -6,6 +6,12 @@ function User( {name, surname, isLoggedIn, friends, address} ) {   // user(props
     // console.log(props);
     // console.log(name, surname, isLoggedIn, friends);
 
+    
+    // early return 
+    if (!isLoggedIn) {
+        return <div>Giriş Yapınız</div>
+    }
+
     return(
         // <div>Selam</div>
 
@@ -14,7 +20,7 @@ function User( {name, surname, isLoggedIn, friends, address} ) {   // user(props
         <>
         
             <h1>
-                {isLoggedIn ? `${name} ${surname}` : "Giriş Yapın..."}
+                {`${name} ${surname}`}
             </h1>
 
             {
@@ -61,6 +67,10 @@ User.propTypes = {
         title: PropTypes.string,
         zip: PropTypes.number
     })
+}
+
+User.defaultProps = {
+    isLoggedIn: false
 }
 
 export default User
