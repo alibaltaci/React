@@ -27,6 +27,7 @@ function App() {
         name="Ali" 
         surname="Baltacı" 
         isLoggedIn={true} 
+        age={27}
         // friends={["Ahmet", "İbrahim", "Deniz"]}
         friends={friends}
         />

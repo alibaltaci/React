@@ -27,3 +27,19 @@ Hangi property 'de hangi veri tipinin alındığını ifade etmek için kullanı
 Prop Types yazarken zorunlu alanları belirtmek için kullanılabilir.
 
     name: PropTypes.string.isRequired
+
+# oneOfType
+
+Bir property 'de birden fazla veri tipini gönderebilmek için oneOfType kullanılır.
+
+        age: PropTypes.oneOfType([
+            PropTypes.number,
+            PropTypes.string
+        ])
+
+Zorunlu tutmak için 
+
+        age: PropTypes.oneOfType([
+            PropTypes.number,
+            PropTypes.string
+        ]).isRequired
