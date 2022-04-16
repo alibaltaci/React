@@ -22,3 +22,8 @@ Prop Types: Component 'lere gönderdiğimiz Property 'lerin tiplerini belirleyeb
 
 Hangi property 'de hangi veri tipinin alındığını ifade etmek için kullanılır. (Başkaları kullanacağı için)
 
+# isRequired
+
+Prop Types yazarken zorunlu alanları belirtmek için kullanılabilir.
+
+    name: PropTypes.string.isRequired

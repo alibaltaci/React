@@ -18,6 +18,8 @@ function User( {name, surname, isLoggedIn, friends} ) {   // user(props) user( {
             </h1>
 
             {
+                friends &&
+                
                 friends.map( (friend) =>   // (friend, index)
                 
                 // <div key={index}>
@@ -37,9 +39,9 @@ function User( {name, surname, isLoggedIn, friends} ) {   // user(props) user( {
 }
 
 User.propTypes = {
-    name: PropTypes.string,
-    surnamename: PropTypes.string,
-    isLoggedIn: PropTypes.bool,
+    name: PropTypes.string.isRequired,
+    surname: PropTypes.string.isRequired,
+    isLoggedIn: PropTypes.bool.isRequired,
     friends: PropTypes.array,
 }
 
