@@ -54,7 +54,7 @@ import fetch from "node-fetch";
 // axios fetch yerine kullanılablir.
 
 // axios bize bir obje döner ve bunu altında bir data ifadesi vardır.
-// Data ifadesini alabilmek için { data } şeklinde kullanılablir.
+// Data ifadesini alabilmek için { data } şeklinde kullanılabilir.
 // { data: newName } şeklinde yeniden isimlendirilebilir.
 
 // import axios from "axios";
