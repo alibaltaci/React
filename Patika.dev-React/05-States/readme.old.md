@@ -1,0 +1,35 @@
+# States Nedir? Nasıl Oluşturulur? 
+
+Component 'lerimiz üzerinde değerinin değişme potansiyeli olan bütün verileri tutan bir JS objesidir.
+
+Componet 'in herhangi bir anında değeri değişme potansiyeli olan bir veri state olarak tanımlanır ve bu state değiştiği an ilgili component render edilerek değişim ekrana yazdırılır.
+
+    npx create-react-app . 
+
+Şeklindeki yazım ek olarak bir dosya açmadan bulunduğumuz dizine proje kurulumunu yapar.
+
+NOT: Dostanın büyük harf içermemesi lazım.
+
+### **ERROR**
+
+npm ERR! code ECONNRESET
+npm ERR! syscall read
+npm ERR! errno ECONNRESET
+npm ERR! network Invalid response body while trying to fetch https://registry.npmjs.org/electron-to-chromium: read ECONNRESET
+npm ERR! network This is a problem related to network connectivity.
+npm ERR! network In most cases you are behind a proxy or have bad network settings.
+npm ERR! network
+npm ERR! network If you are behind a proxy, please make sure that the
+npm ERR! network 'proxy' config is set properly.  See: 'npm help config'
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\TOSHIBA\AppData\Local\npm-cache\_logs\2022-04-24T13_02_51_419Z-debug-0.log
+
+### **SOLUTION**
+
+npm config get proxy  
+null
+
+npm config rm proxy
+
+npm config rm https-proxy
