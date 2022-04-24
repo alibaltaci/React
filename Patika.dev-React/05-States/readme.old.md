@@ -48,3 +48,19 @@ cmd --> `npm config rm https-proxy`
 
 
 artık `npm start` diyerek projemizi çalıştırabiliriz.
+
+---
+
+## State Tanımlamak
+
+react 'in altında useState adında bir hook bulunur. Bu hook 'u import ediyoruz. (bkz. app.js)
+
+    import { useState } from "react";
+---
+    const [name, setName] = useState("Ali");
+
+- name : state 'imizin adı.
+
+- setName : state 'e atama yapacak olan fonksiyonun ismi
+
+State 'ler tüm veri tipleri ile tanımlanabilirler.
