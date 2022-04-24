@@ -8,28 +8,43 @@ Componet 'in herhangi bir anında değeri değişme potansiyeli olan bir veri st
 
 Şeklindeki yazım ek olarak bir dosya açmadan bulunduğumuz dizine proje kurulumunu yapar.
 
-NOT: Dostanın büyük harf içermemesi lazım.
+NOT: Dosyanın büyük harf içermemesi lazım.
 
 ### **ERROR**
 
 npm ERR! code ECONNRESET
+
 npm ERR! syscall read
+
 npm ERR! errno ECONNRESET
+
 npm ERR! network Invalid response body while trying to fetch https://registry.npmjs.org/electron-to-chromium: read ECONNRESET
+
 npm ERR! network This is a problem related to network connectivity.
+
 npm ERR! network In most cases you are behind a proxy or have bad network settings.
+
 npm ERR! network
+
 npm ERR! network If you are behind a proxy, please make sure that the
+
 npm ERR! network 'proxy' config is set properly.  See: 'npm help config'
 
 npm ERR! A complete log of this run can be found in:
+
 npm ERR!     C:\Users\TOSHIBA\AppData\Local\npm-cache\_logs\2022-04-24T13_02_51_419Z-debug-0.log
 
 ### **SOLUTION**
 
-npm config get proxy  
-null
+https://stackoverflow.com/questions/18419144/npm-not-working-read-econnreset
 
-npm config rm proxy
+cmd --> `npm config get proxy`  (proxy ayarlarını görüntülemek için kullanılmasa da olur.)
 
-npm config rm https-proxy
+`null`
+
+cmd --> `npm config rm proxy`
+
+cmd --> `npm config rm https-proxy`
+
+
+artık `npm start` diyerek projemizi çalıştırabiliriz.
