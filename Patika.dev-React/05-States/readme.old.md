@@ -67,4 +67,29 @@ State 'ler tüm veri tipleri ile tanımlanabilirler.
 
 State değişikliginde component baştan render edilir.
 
+# Array State
+
+state array olarak da tanımlanabilir.
+
+    const [friends, setFriends] = useState(["Deniz", "İbrahim", "Hasan", "Tuncay"]);
+
+State 'lerde atama işlemi yaparken ilk bakılması gereken, tanımlanan state 'in başlangıç veri tipi neydi?
+
+Array 'lere yeni eleman eklenirken eski verilerin korunlasına dikkat edilmelidir.
+
+Mevcut verilerilerin korunması için
+
+    [...vales, newValue]
+
+şeklinde bir tanımlama yapılmalıdır.
+
+- values içinde değerleri barındıran orijinal array 'imizdir.
+
+- newValue ise value array 'ine eklenmesini istediğimiz yeni değeri ifade eder.
+
+**Yeni Değeri Başa Eklemek İçin**
+
+    [newValue, ...vales]
+
+
 
