@@ -8,12 +8,19 @@ function App() {
 
   const [name, setName] = useState("Ali");
 
+  const [age, setAge] = useState(27);
+
   return (
     <div className="App">
 
       <h1>Merhaba {name}!</h1>
 
-      <button onClick={ () => setName("Ahmet") }>Click</button>
+      <h2> { age } </h2>
+
+      <button onClick={ () => setName("Ahmet") }>Change Name</button>
+
+      <button onClick={ () => setAge(42) }>Change Age</button>
+
     </div>
   );
 }

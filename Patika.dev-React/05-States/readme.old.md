@@ -64,3 +64,7 @@ react 'in altında useState adında bir hook bulunur. Bu hook 'u import ediyoruz
 - setName : state 'e atama yapacak olan fonksiyonun ismi
 
 State 'ler tüm veri tipleri ile tanımlanabilirler.
+
+State değişikliginde component baştan render edilir.
+
+
