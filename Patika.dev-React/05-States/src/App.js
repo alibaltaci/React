@@ -14,6 +14,10 @@ function App() {
 
   const [friends, setFriends] = useState(["Deniz", "İbrahim", "Hasan", "Tuncay"]);
 
+  // object states
+
+  const [address, setAddress] = useState({title: "Manisa", zip: 42133});
+
   return (
     <div className="App">
 
@@ -30,6 +34,8 @@ function App() {
 
       <h2>Friends</h2>
 
+      {/* Array State */}
+
       {
         friends.map( (friend, index) => <div key={index}> { friend } </div> )
       }
@@ -38,8 +44,21 @@ function App() {
       <br/>
 
       <button onClick={ () => setFriends( ["Emirhan", ...friends])}>Add New Friend</button>
-      
+  
+      <hr />
+      <br/><br/>
 
+      {/* Object States */}
+
+      <h2>Address</h2>
+
+      <div> {address.title} {address.zip} </div>
+
+      <br />
+
+      <button onClick={ () => setAddress( {...address, title: "Ankara", zip: 42428} )}>Change the Address</button>
+
+  
     </div>
   );
 }

@@ -91,5 +91,11 @@ Mevcut verilerilerin korunması için
 
     [newValue, ...vales]
 
+# Object States
 
+State 'i bir obje olarak tanımlayıp güncelleme. 
 
+    const [address, setAddress] = useState({title: "Manisa", zip: 42133});
+
+---
+    () => setAddress( {...address, title: "Ankara", zip: 42428} )
