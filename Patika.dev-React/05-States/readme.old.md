@@ -99,3 +99,7 @@ State 'i bir obje olarak tanımlayıp güncelleme.
 
 ---
     () => setAddress( {...address, title: "Ankara", zip: 42428} )
+
+# Sayaç Uygulaması (counter app)
+
+bkz. Patika.dev-React --> 06-counterApp
