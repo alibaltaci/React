@@ -102,4 +102,4 @@ State 'i bir obje olarak tanımlayıp güncelleme.
 
 # Sayaç Uygulaması (counter app)
 
-bkz. Patika.dev-React --> 06-counterApp
+bkz. Patika.dev-React --> 06-counter-app
