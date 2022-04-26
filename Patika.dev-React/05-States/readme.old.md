@@ -103,3 +103,16 @@ State 'i bir obje olarak tanımlayıp güncelleme.
 # Sayaç Uygulaması (counter app)
 
 bkz. Patika.dev-React --> 06-counter-app
+
+# Re-Render Mantığını Anlamak (React vs jQuery)
+
+--> src --> jquery-example.html
+
+## jQuery 
+
+jQuery 'i html sayfamızda kullanabilmek için;
+
+--> cdnjs --> jQuery --> html (paste)
+
+https://cdnjs.com/libraries/jquery
+
