@@ -116,3 +116,8 @@ jQuery 'i html sayfamızda kullanabilmek için;
 
 https://cdnjs.com/libraries/jquery
 
+--> browser --> inspect --> ... --> more tools --> rendering --> paint flashing (x) (ekranda render edilen alanları işaretleyerek
+bize gösterir)
+
+* jQuery ve React arasındaki fark, jQuery state güncellendiğinde değer değişse de aynı kalsada render işlemi yapar.
+React ise değer değişmediği sürece render işlemi yapmaz (virtualDOM vs RealDOM).
