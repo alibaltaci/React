@@ -121,3 +121,16 @@ bize gösterir)
 
 * jQuery ve React arasındaki fark, jQuery state güncellendiğinde değer değişse de aynı kalsada render işlemi yapar.
 React ise değer değişmediği sürece render işlemi yapmaz (virtualDOM vs RealDOM).
+
+# Input için state tanımı yapmak
+
+--> create componets folder --> inputExample.js
+
+* **rfce** kısa yolu ile react componenti oluşturulabilir.
+
+- imputExample.js 'yi index.js içine import et.
+
+- dosyayı render etmek için ilgili kısma ekle.
+
+
+
