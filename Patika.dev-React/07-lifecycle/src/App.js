@@ -11,8 +11,21 @@ function App() {
 
   // useEffect
 
-  useEffect( () => console.log("State Güncellendi!"));
+  // state güncellendiğinde 
+  // useEffect( () => console.log("State Güncellendi!"));
 
+  // number state 'i dinlemek için
+  useEffect( () => {
+    console.log( "Number State Güncellendi!");
+  }, [number] );
+
+  // name state 'i dinlemek için
+
+  useEffect( () => {
+    console.log("Name State Güncellendi!");
+  }, [name] );
+
+  // component güncellendiğinde
   useEffect( () => {
     console.log("Component Mount Edildi")
   }, [] )

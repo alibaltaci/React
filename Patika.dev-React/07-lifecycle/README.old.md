@@ -17,3 +17,11 @@ Arrow functiondan sonra ikinci parametre olarak **dependency array ( [] )** giri
     }, [] )
 
 [] içi boş bırakılırsa, component mount edildiği anı yakalansın demektir.
+
+Seçili state 'i dinlemek için
+
+      useEffect( () => {
+        console.log( "Number State Güncellendi!");
+    }, [number] );
+
+bu sayede sadece number state 'i dinlnecek. Diğer state 'lerin güncellenmesi takip edilmeyecek.
