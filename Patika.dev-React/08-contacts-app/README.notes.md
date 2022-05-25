@@ -7,7 +7,11 @@ Bu bölüme kadar öğrendiklerimiz ile bir **contact list app** geliştireceği
 
 * contacts componentimizi çağırdığımızda kullanacağımız dosyalarımızı oluşturalım
 
-  create --> ```components/Contacts/index.js```
+  create in src folder --> ```components/Contacts/index.js```
+
+* List ve List componentleri oluştur.
+
+* List ve Form componentleri Contects componentinin altında kullanılacağı için, bu klasörler dizin olarak Contact klasörü altında oluşturulabilir. 
 
 
 
