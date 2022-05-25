@@ -9,14 +9,19 @@ function Counter() {
     useEffect( () => {
         console.log("Component Mount Edildi");
   
-        setInterval( () => {
+        const inteval = setInterval( () => {
           setNumber( (n) => n + 1);
-      }, 1000 );
+        }, 1000);
+
+        // return () => console.log("component unmount edildi!");
+
+        return () => clearInterval(inteval);
+
       }, [] )
 
-    // useEffect( () => {
-    //   console.log( "Number State Güncellendi!");
-    // }, [number] );
+    useEffect( () => {
+      console.log( "Number State Güncellendi!");
+    }, [number] );
   
 
     // setInterval( () => {
@@ -27,8 +32,6 @@ function Counter() {
     <div>
 
         <h1>{number}</h1>
-
-        {/* <button onClick={ () => setNumber(number + 1) }>click</button> */}
 
     </div>
   )

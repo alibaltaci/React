@@ -25,3 +25,44 @@ Seçili state 'i dinlemek için
     }, [number] );
 
 bu sayede sadece number state 'i dinlnecek. Diğer state 'lerin güncellenmesi takip edilmeyecek.
+
+# Component Unmount
+
+* create components folder
+
+* Create Counter.js (in component folder)
+
+* Not: isVisible = true - görünür
+
+  isVisible = false - görünmez ( !isVisible )
+
+* Sayaç işlemini buton aracılığı ile kaldırıldığında (unmount) console bölümünde hata alırız (setInterval 'den dolayı).
+
+  Hatalardan kurtulmak için işlem kaldırıldığında setInterval durdurulmalıdır.
+
+  Component 'in unmount edildiğini analamak için;
+
+        return () => console.log("Component unmount edildi!");
+
+  ifadesi Couter fonksiyonumuzdaki useEffect içine yazılabilir. ( bkz. Counter.js )
+
+  Şimdi setInterval işlemini interval adında bir değişkene atayalım ve return ( unmount ) kısmında da clearInterval 'i kullanalım.
+
+* interval değişken ataması
+
+```const interval = setInterval( () => { 
+    console.log("Component mount edildi!");
+
+    setNumber( (n) => n + 1);
+
+    }, 1000);
+```
+
+- component unmount
+
+```
+    return () => clearInterval(interval);
+```
+
+
+  
