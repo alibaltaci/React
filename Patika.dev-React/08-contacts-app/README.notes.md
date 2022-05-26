@@ -11,7 +11,13 @@ Bu bölüme kadar öğrendiklerimiz ile bir **contact list app** geliştireceği
 
 * List ve List componentleri oluştur.
 
-* List ve Form componentleri Contects componentinin altında kullanılacağı için, bu klasörler dizin olarak Contact klasörü altında oluşturulabilir. 
+* List ve Form componentleri Contects componentinin altında kullanılacağı için, bu klasörler dizin olarak Contact klasörü altında oluşturulabilir.
+
+* Form içine inputları ekle.
+
+* onChangeInput function
+
+* onSubmit funtion
 
 
 
