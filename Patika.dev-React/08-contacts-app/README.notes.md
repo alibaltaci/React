@@ -9,15 +9,27 @@ Bu bölüme kadar öğrendiklerimiz ile bir **contact list app** geliştireceği
 
   create in src folder --> ```components/Contacts/index.js```
 
-* List ve List componentleri oluştur.
+* List ve Form componentleri oluştur.
 
 * List ve Form componentleri Contects componentinin altında kullanılacağı için, bu klasörler dizin olarak Contact klasörü altında oluşturulabilir.
 
+## Form
+
 * Form içine inputları ekle.
 
-* onChangeInput function
+* onChangeInput function (Inputları yakalamak için)
 
-* onSubmit funtion
+* onSubmit funtion (Inputları Göndermek için)
+
+* Elde edilen kayıtları bir state 'e eklemek gerekir.
+
+* Bu sayede List component 'inde kayıtları listeleyebiliriz.
+
+* Kullanıcı kayıtlarını Form Component 'i içinde tutarsak, bu state 'i List Component 'ine nasıl taşırız?
+
+* Bu bir sıkıntı çıkartacağı için kayıtları contacts component 'i içinde tutabliriz. 
+
+* 
 
 
 

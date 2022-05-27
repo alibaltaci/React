@@ -1,11 +1,22 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 
 // import sub components
 import List from './List';
-
 import Form from './Form';
 
+
 function Contacts() {
+
+  const [contacts, setContacts] = useState([]); 
+
+  // contacts 'e atama yapıldğında useEffect ile güncel halini görelim
+
+  useEffect( () => {
+
+    console.log(contacts);
+  
+  }, [contacts]);
+
   return (
     <div>
 
@@ -15,10 +26,10 @@ function Contacts() {
       <br />
 
       <List />
-      
+
       <br />
 
-      <Form />
+      <Form addNewContact={setContacts} oldContacts={contacts}/> {/* addNewContact ve oldContacts burada bizim verdiğimiz isimde proptur */}
 
     </div>
   )

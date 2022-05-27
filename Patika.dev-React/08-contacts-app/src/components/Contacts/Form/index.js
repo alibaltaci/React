@@ -1,10 +1,13 @@
-import React from 'react'
+import {useState, useEffect} from "react";
+import Contacts from "..";
 
-import {useState} from "react";
+const initialValues = {fullname: "", phone_number: "" };
 
-function Form() {
+function Form( {addNewContact, oldContacts} ) { // addContact propunu burada çekiyoruz.
 
-  const [form, setForm] = useState( {fullname: "", phone_number: "" });
+//   console.log(addContact);
+
+  const [form, setForm] = useState( initialValues );
 
   const onChangeInput = (e) => {
       setForm( {...form, [e.target.name]: e.target.value});
@@ -17,22 +20,31 @@ function Form() {
     if (form.fullname === "" || form.phone_number === "") {
         return false; // formu gönderme
     }
+
+    addNewContact([...oldContacts, form])  // form objesini olduğu gibi arrayin içine yerleştirelim. // setContact
       
-    console.log(form)
+    // console.log(form)
+
+    // setForm(initialValues); // input alanlarını temizlemek için yöntem-1
 
     e.preventDefault(); // sayfa yenilenmesini önlemek için
   };
+
+//   input alanlarını temizleme yöntem-2
+  useEffect( () => {
+    setForm(initialValues);
+  }, [oldContacts]);
 
   return (
     <form>
       {/* Form */}
         
         <div>
-            <input name='fullname' placeholder='Full Name' onChange={onChangeInput}/>
+            <input name='fullname' placeholder='Full Name' value={form.fullname} onChange={onChangeInput}/>
         </div>
 
         <div>
-            <input name='phone_number' placeholder='Phone Number' onChange={onChangeInput}/>
+            <input name='phone_number' placeholder='Phone Number' value={form.phone_number} onChange={onChangeInput}/>
         </div>
 
         <div>
