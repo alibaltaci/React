@@ -25,13 +25,14 @@ function Contacts() {
       <br />
       <br />
 
-      <List />
+      <List contacts={contacts} />
 
       <br />
 
       <Form addNewContact={setContacts} oldContacts={contacts}/> {/* addNewContact ve oldContacts burada bizim verdiğimiz isimde proptur */}
-
+      
     </div>
+
   )
 }
 

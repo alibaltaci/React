@@ -27,9 +27,15 @@ Bu bölüme kadar öğrendiklerimiz ile bir **contact list app** geliştireceği
 
 * Kullanıcı kayıtlarını Form Component 'i içinde tutarsak, bu state 'i List Component 'ine nasıl taşırız?
 
-* Bu bir sıkıntı çıkartacağı için kayıtları contacts component 'i içinde tutabliriz. 
+* Bu bir sıkıntı çıkartacağı için kayıtları contacts component 'i içinde tutabiliriz. 
 
-* 
+## Kayıtların Listelenmesi
+
+* Girilen kayıtları List Component 'imizde listeleyeceğiz.
+
+* Eklenen kayıtları Contacts 'de prop olarak gönderiyoruz.
+
+* Sonra List Component 'i içinde gerekli listeleme işlemlerini yapıyoruz.
 
 
 
