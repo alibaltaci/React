@@ -37,5 +37,13 @@ Bu bölüme kadar öğrendiklerimiz ile bir **contact list app** geliştireceği
 
 * Sonra List Component 'i içinde gerekli listeleme işlemlerini yapıyoruz.
 
+## Filtreleme İşlemleri
+
+* Eklenen kayıtlar arasından filtreme işlemini yapabilmek için input kısmı ekleyeceğiz. (List Component)
+
+* Input 'a bir veri girildiği anda bunu state 'imize yazmamız lazım. Bunun için useState Hook 'unu List Componentimize İndiriyoruz.
+
+  ```const [filterText, setFilterText] = useState("");``` 
+
 
 
