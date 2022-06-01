@@ -63,4 +63,12 @@ Bu bölüme kadar öğrendiklerimiz ile bir **contact list app** geliştireceği
 
 * **some** ile obje iindeki birden fazla key 'in aynı anda dikkate alınmasını ve filtreleme işlemi yaparken tüm değerlere bakılması gerektiğini ifade ediyoruz.
 
+## Style
+
+--> app.css (app.js)
+
+--> create style.css (Contacts Folder) (index.js)
+
+
+
 

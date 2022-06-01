@@ -47,7 +47,7 @@ function Form( {addNewContact, oldContacts} ) { // addContact propunu burada çe
             <input name='phone_number' placeholder='Phone Number' value={form.phone_number} onChange={onChangeInput}/>
         </div>
 
-        <div>
+        <div className="btn">
             <button onClick={onSubmit}>Add</button>
         </div>
 
