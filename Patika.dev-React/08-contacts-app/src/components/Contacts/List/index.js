@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function List( {contacts} ) {
 
-  const [filterText, setFilterText] = useState("");
+  const [filterText, setFilterText] = useState("");  // input alanına varsayılan değer atamak için.
 
   // filter metodu
 
@@ -22,6 +22,8 @@ function List( {contacts} ) {
             <li key={i}> {contact.fullname} </li>
           ))
         } */}
+
+        {/* filtreleme işlemleri eklendiği için yukarıdaki kodu aşağıdaki gibi restore ediyoruz. */}
 
         {filtered.map( (contact, i) => 
           <li key={i}> {contact.fullname} </li>)}

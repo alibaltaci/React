@@ -41,9 +41,26 @@ Bu bölüme kadar öğrendiklerimiz ile bir **contact list app** geliştireceği
 
 * Eklenen kayıtlar arasından filtreme işlemini yapabilmek için input kısmı ekleyeceğiz. (List Component)
 
-* Input 'a bir veri girildiği anda bunu state 'imize yazmamız lazım. Bunun için useState Hook 'unu List Componentimize İndiriyoruz.
+* Input 'a bir veri girildiği anda bunu state 'imize yazmamız lazım. Bunun için useState Hook 'unu List Componentimize indiriyoruz.
 
   ```const [filterText, setFilterText] = useState("");``` 
 
+* Kayıtlar arasında input alanına girilen değeri bulabilmek için "filter" metodunu kullanacağız.
+
+```
+  const filtered = contacts.filter( (item) => {
+    return Object.keys(item).some( (key) => 
+    item[key].toString().toLowerCase().includes(filterText.toLocaleLowerCase()));
+  });
+
+```
+
+* **filter** metodu hedef array içindeki verileri teker teker alır. 
+
+* Mevcut arrayimizde object tipi verilerimiz olduğu için **Object.keys** metodunu kullanabiliriz. 
+
+* **keys** seçili objemizdeki değerleri içerir.
+
+* **some** ile obje iindeki birden fazla key 'in aynı anda dikkate alınmasını ve filtreleme işlemi yaparken tüm değerlere bakılması gerektiğini ifade ediyoruz.
 
 
