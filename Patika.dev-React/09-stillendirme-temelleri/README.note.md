@@ -36,3 +36,6 @@
 --> Yukarıdaki linki index.html 'e yapıştırıyoruz.
 
 Bu sayede bootstrap 'ı çalışmamızda kullanabiliriz.
+
+## Module CSS
+
