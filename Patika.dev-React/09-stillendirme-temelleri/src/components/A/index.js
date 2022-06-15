@@ -2,6 +2,8 @@ import React from 'react'
 
 import styles from "./styles.module.css";
 
+console.log(styles);
+
 export default function A() {
   return (
 
