@@ -26,3 +26,15 @@
 
 ## Axios
 
+- fetch ile ek kütüphane kurmadan yaptığımız işlemleri ek kütüphaneler kurarak da yapabiliriz.
+
+- Axios kütüphanesi bunlardan biridir. Fetch ile yaptıüımız her şeyi axios ile de yapabiliriz.
+
+- Axios verileri obje olarak döner, Fetch gibi stringify şeklinde dönmez. Yani verileri json 'a el ile döndürmeye gerek yok.
+
+- Axios ile bir isteği iptal edebilr ya da timeout verebiliriz. Fetch 'de bu yok.
+
+- Axios daha geniş browser desteği sağlar.
+
+
+
