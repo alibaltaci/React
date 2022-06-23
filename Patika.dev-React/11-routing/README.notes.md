@@ -113,6 +113,12 @@ Layout.js -->
         </Route>
 
 
+# NavLink (Aktif sayfanın Navbar 'da farklı renkte gösterilmesi için)
+
+NavLink Link 'ten farklı olarak style, className gibi özellikler eklememizi sağlar.
+
+Özellik içinde dönen objede fonksiyon tanımlayabiliriz. 
+
 
 
 

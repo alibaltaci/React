@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import { Link, Outlet } from 'react-router-dom'
+// import { Link, Outlet } from 'react-router-dom'
+
+import { NavLink, Outlet } from 'react-router-dom';
 
 export default function Layout() {
   return (
@@ -13,21 +15,27 @@ export default function Layout() {
         <ul>
 
             <li>
-                <Link to={"/"}>
-                    HOME
-                </Link>
+                <NavLink style={ ({isActive}) => ({
+                        color: isActive ? "red" : "blue"
+                    }) } to={"/"}>
+                        HOME
+                </NavLink>
             </li>
 
             <li>
-                <Link to={"blog"}>
+                <NavLink style={ ( {isActive} ) => ({
+                    color: isActive ? "red" : "blue"
+                })} to={"blog"}>
                     Blog
-                </Link>
+                </NavLink>
             </li>
 
             <li>
-                <Link to={"contact"}>
+                <NavLink style={ ( {isActive} ) => ({
+                    color: isActive ? "red" : "blue"
+                })} to={"contact"}>
                     Contact
-                </Link>
+                </NavLink>
             </li>
         </ul>
       </nav>
