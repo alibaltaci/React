@@ -15,9 +15,9 @@ export default function Layout() {
         <ul>
 
             <li>
-                <NavLink style={ ({isActive}) => ({
-                        color: isActive ? "red" : "blue"
-                    }) } to={"/"}>
+                <NavLink style={ ( {isActive} ) => ({
+                    color: isActive ? "red" : "blue"
+                }) } to={"/"}>
                         HOME
                 </NavLink>
             </li>
