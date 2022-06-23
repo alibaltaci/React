@@ -1,5 +1,9 @@
 # React Routing Yapısı
 
+### Yararlandığım YouTube videosu
+
+- https://www.youtube.com/watch?v=UkdJXszIRPQ
+
 Routing yapısı, React Router Kütüphanesi yardımıyla yapılır.
 
 React Router Link:
@@ -36,6 +40,78 @@ http://localhost:3000/hi
 ## Farklı Sayfalar Gösterelim 
 
 src --> create "pages" folder.
+
+
+``<Route path='/' element={ <Home /> }/>`` / ana sayfa 
+
+``<Route path='blog' element={ <Blog /> }/> ``
+
+``<Route path='contact' element={ <Contact /> }/>``
+
+
+# Navbar oluşuralım
+
+src --> create Layout.js
+
+- App.js içinde gösterdiğimiz sayfaların bağlantılarını Layout içine taşıyacağız ve bu componeti App.js 'de yazdıracağız.
+
+- Sayfalarımıza buradaki navbar sayesinde tıklayarak ulaşacağız.
+
+- Layout component 'inin içine Link özelliğini indiriyoruz.
+
+- Nested Route 'larımız için Outlet özelliğini indiriyoruz.
+
+`` import { Link, Outlet } from 'react-router-dom' ``
+
+
+Layout.js --> 
+
+``` 
+<nav>
+
+        <ul>
+
+            <li>
+                <Link to={"/"}>
+                    HOME
+                </Link>
+            </li>
+
+            <li>
+                <Link to={"blog"}>
+                    Blog
+                </Link>
+            </li>
+
+            <li>
+                <Link to={"contact"}>
+                    Contact
+                </Link>
+            </li>
+        </ul>
+
+        {/* Nested route 'larımız (ilgili nested route) burada gösterilecek  */}
+
+        <Outlet /> 
+
+      </nav>
+
+```
+
+- ``<a href= ... >`` yerine  ``<Link to= ...>`` kullanıyoruz.
+
+# Nested Route - navbar 'ın tüm sayfalarda gösterilmesi için 
+
+        <Route path='/*' element={ <Layout /> }>
+
+          <Route path='' element={ <Home /> }/>  
+
+          <Route path='blog' element={ <Blog /> }/>  
+
+          <Route path='contact' element={ <Contact /> }/>  
+
+        </Route>
+
 
 
 
