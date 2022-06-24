@@ -49,7 +49,7 @@ src --> create "pages" folder.
 ``<Route path='contact' element={ <Contact /> }/>``
 
 
-# Navbar oluşuralım
+# Navbar oluşturalım
 
 src --> create Layout.js
 
@@ -120,5 +120,36 @@ NavLink Link 'ten farklı olarak style, className gibi özellikler eklememizi sa
 Özellik içinde dönen objede fonksiyon tanımlayabiliriz. 
 
 
+    <li>
+        <NavLink style={ ( {isActive} ) => ({
+            color: isActive ? "red" : "blue"
+        }) } to={"/"}>
+                HOME
+        </NavLink>
+    </li>
+
+`` isActive `` ile aktif olan bağlantıyı yakalayabiliriz.
+
+# Dynamic Route
+
+src/pages --> create Post.js 
+
+## Blog altındaki postlara erişmek için
+
+`` <Route path='blog/:postId' element={ <Post /> }/>   ``
+
+burada `` :postId `` bağlantımızın lacağı parametredir. Her postun kendisine ait eşsiz bir Id 'si olacaktır ve biz bunları birer parametre olarak alacağız. (API 'lerde fetch yapar gibi)
 
 
+## useParams
+
+Parametreleri getirmek için useParams Hook 'unu kullanacağız.
+
+`` import { useParams } from 'react-router-dom' ``
+
+İşlem sonucunda bize dönecek olan veri. 
+
+    {*: 'blog/1', postId: '1'}
+        *: "blog/1"
+        postId: "1"
+    [[Prototype]]: Object

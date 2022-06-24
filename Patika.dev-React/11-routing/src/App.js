@@ -11,6 +11,8 @@ import Contact from './pages/Contact';
 // Layout for navbar
 import Layout from './Layout';
 
+import Post from './pages/Post';
+
 function App() {
   return (
 
@@ -34,9 +36,12 @@ function App() {
 
           <Route path='' element={ <Home /> }/>  
 
+          <Route path='contact' element={ <Contact /> }/>  
+
           <Route path='blog' element={ <Blog /> }/>  
 
-          <Route path='contact' element={ <Contact /> }/>  
+          <Route path='blog/:postId' element={ <Post /> }/>  
+
 
         </Route>
  
