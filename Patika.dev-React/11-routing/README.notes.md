@@ -1,5 +1,11 @@
 # React Routing Yapısı
 
+- React router ile sadece değişmesini istediğimiz yerlerleri değiştirebiliriz.
+
+- Sayfanın komple gidip yeni sayfasının gelmesine gerek kalmaz.
+
+- Sayfa içinde bir yere gittğimizde tüm sayfa yenileniyor ise React Router çözümünün kullanılmadığını anlayabiliriz.
+
 ### Yararlandığım YouTube videosu
 
 - https://www.youtube.com/watch?v=UkdJXszIRPQ
@@ -20,7 +26,11 @@ cmd --> ``npm install react-router-dom@6``
 
 app.js --> ``import {BrowseRouter, Routes, Route, Link} from "react-router-dom";``
 
-## Path vermek
+## Path vermek 
+
+### BrowseRouter 
+
+- Router yapısını kullanabilmek için en dışa "BrowseRouter" yapısını vermeliyiz.
 
 http://localhost:3000/hi
 
@@ -100,6 +110,12 @@ Layout.js -->
 
 - ``<a href= ... >`` yerine  ``<Link to= ...>`` kullanıyoruz.
 
+- `` <a href> `` path verilirse sayfa yenilenir. 
+
+- `` <Link to > `` ile path verilirse ilgili alan gelir sayfa yenilenmez.
+
+- İki yapı arasındaki temel fark budur.
+
 # Nested Route - navbar 'ın tüm sayfalarda gösterilmesi için 
 
         <Route path='/*' element={ <Layout /> }>
@@ -144,6 +160,8 @@ burada `` :postId `` bağlantımızın lacağı parametredir. Her postun kendisi
 ## useParams
 
 Parametreleri getirmek için useParams Hook 'unu kullanacağız.
+
+Post.js --> 
 
 `` import { useParams } from 'react-router-dom' ``
 

@@ -133,4 +133,9 @@ React ise değer değişmediği sürece render işlemi yapmaz (virtualDOM vs Rea
 - dosyayı render etmek için ilgili kısma ekle.
 
 
+# No Match (404)
+
+- Var olmayan bir endpoint girildiğinde hata göstermek için.
+
+
 
