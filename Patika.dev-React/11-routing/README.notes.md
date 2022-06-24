@@ -153,3 +153,34 @@ Parametreleri getirmek için useParams Hook 'unu kullanacağız.
         *: "blog/1"
         postId: "1"
     [[Prototype]]: Object
+
+
+## useNavigate
+
+Bir sayfaya yönlendirmek için kullanılabilir.
+
+Home.js --> `` import { useNavigate } from 'react-router-dom'; ``
+
+Home sayfası açıldıktan 3 sn sonra blog sayfasına yönlendiren fonksiyon yazalım.
+
+Home.js --> 
+
+const navigate = useNavigate();
+
+    useEffect( () => {
+        setTimeout( () => {
+        navigate("blog");  
+        }, 3000);
+    }, [navigate])
+
+## Go back - Go forward
+
+Burada path 'e -1 yazılırsa ``navigate(-1)`` gelinen sayfaya 3sn sonra geri döner. Buradaki parametreye -2, -3 gibi değerler girerek kaç sayfa öncesine gidileceği ayarı yapılabilir.
+
+Burada path 'e  yazılırsa ``navigate(1)`` ileriye gider.
+
+# replace 
+
+Gelinen sayfanın history 'de gösterilmemesi için kullanılan bir eylem.
+
+`` navigate("blog", { replace: true } ) ``
