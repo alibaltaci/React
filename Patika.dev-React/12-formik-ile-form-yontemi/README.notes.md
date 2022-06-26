@@ -1,28 +1,24 @@
-import './App.css';
+# Formik
 
-// Formik
-import { Formik, Field, Form } from "formik";
+https://formik.org/  --> Get Started --> Examples --> Basic
 
-function App() {
-  return (
-    <div className="App">
+## Kurulum
+
+cmd --> ``npm install formik --save``
+
+## Örnek
+
 
     <h1>Sign Up</h1>
-
     <Formik
       initialValues={{
         firstName: '',
         lastName: '',
         email: '',
       }}
-      
-      // onSubmit={async (values) => {
-      //   await new Promise((r) => setTimeout(r, 500));
-      //   alert(JSON.stringify(values, null, 2));
-      // }}
-
-      onSubmit={values => {
-        console.log(values);
+      onSubmit={async (values) => {
+        await new Promise((r) => setTimeout(r, 500));
+        alert(JSON.stringify(values, null, 2));
       }}
     >
       <Form>
@@ -44,8 +40,6 @@ function App() {
     </Formik>
 
 
-    </div>
-  );
-}
+- initialValues ile Field alanındaki name aynı olmalıdır. Id çok önemli değil.
 
-export default App;
+
