@@ -42,4 +42,14 @@ cmd --> ``npm install formik --save``
 
 - initialValues ile Field alanındaki name aynı olmalıdır. Id çok önemli değil.
 
+# handleSubmit (işlemek) & handleChange
 
+- Formik 'in bize vermiş olduğu form ve field componentlerini kullanmayalım, doğrudan HTML 'deki form ve input etiketlerini kullanalım.
+
+- handleSubmit arrow function sayesinde onSubmit 'i çalıştırabiliriz.
+
+- handleSubmit ile submit işlemini yakalayıp, submit fonksiyonunu çalıştırabiliriz.
+
+- handleChange ile değişimleri tespit eder ve inputları initialValues ile ilişkilendirebiliriz.
+
+- Özelleştirme gerektiren işlemlerde bu yöntemleri uygulamamız gerekebilir.
