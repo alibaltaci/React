@@ -22,7 +22,10 @@ function App() {
         gender: "male",
 
         // chackbox
-        hobies: []  // birden fazla seçeneği seçebildiğimiz için tipi array olamak zorunda.
+        hobies: [],  // birden fazla seçeneği seçebildiğimiz için tipi array olamak zorunda.
+
+        // drapdown
+        country: "tr" 
       }}
       
       // onSubmit={async (values) => {
@@ -130,6 +133,17 @@ function App() {
             </div>
 
 
+            <br />
+            <br />
+
+            {/* Dropdown */}
+
+            <select name='country' value={values.country} onChange={ handleChange }>
+              {/* <option></option> */}
+              <option value={"tr"}>Turkey</option>
+              <option value={"en"}>England</option>
+              <option value={"usa"}>USA</option>
+            </select>
             <br />
             <br />
 

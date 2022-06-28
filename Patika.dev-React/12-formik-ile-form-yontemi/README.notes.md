@@ -93,3 +93,9 @@ cmd --> ``npm install formik --save``
 
 ## Checkbox
 
+    <select name='country' value={values.country} onChange={ handleChange }>
+      {/* <option></option> */}
+      <option value={"tr"}>Turkey</option>
+      <option value={"en"}>England</option>
+      <option value={"usa"}>USA</option>
+    </select>
