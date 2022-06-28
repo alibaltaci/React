@@ -140,7 +140,7 @@ Eğer aşağıdaki gibi formik tanımlanırsa `` formik.handleChange `` şeklind
         }
 
 
-# Form Validasyonları - 1
+# Form Validasyonları
 
 - Validasyon işlemlerini "yup js" ile yapıyoruz.
 
@@ -196,3 +196,35 @@ import işlemimizi doğrudan `` import validationSchema from './validations'; ``
 - Doğru eşleştirme için initialVales 'deki keyler ile şemadaki keyler aynı olmalıdır.
 
 
+# Hata Mesajlarının Gösterilmesi (errors - touched - handleBlur) 
+
+- Errors tanımı altında yer alan keylerden bir hata meydana gelirse, bunları errors ile yakalayabiliriz.
+
+`` const { errors } import "useFormik"; ``
+
+- İlgili input 'a daha önce focus (touch) oluş mu? kontrolünü yaparak, uyrının sadece ilgili alana gösterilmesini sağlayabiliriz.
+
+`` const { touched } import "useFormik"; ``
+
+- uyarının focus 'dan çıkıldığı anda gösterilmesini istersek onBlur özelliğini kullanabiliriz.
+
+`` const { handleBlur } import "useFormik"; ``
+
+        <label htmlFor="email">Email</label>
+        <input name='email' value={values.email} onChange={ handleChange } onBlur={ handleBlur }/>
+
+        {errors.email && touched.email && ( <div className='error'> {errors.email} </div>) }
+
+- yup 'un bize veridiği mesajlar yerine kendi mesajlarımızı gösterelim.
+
+```
+    let validations = object({
+        email: string().email("Geçerli bir mail giriniz.").required("Zorunlu alan."),
+        password: string().min(5, "Parolanız en az 5 karakterden oluşmalıdır.").required("Zorunlu alan."),
+        passwordConfirm: string().oneOf([ref("password")], "Girdiğiniz parolalar aynı olmak zorunda.").required("Zorunlu alan."),
+      });
+```
+
+- yup ve formik farklı kütüphaneler olmasına rağmen enteğre olarak çalışabilmektedirler.
+
+- Formik veya benzeri çözümleri kullanmamızın bir diğer sebebi de, state kullanarak yaptığınız form kontrollerinde state her değiştiğinde component tekrardan render edilir. Formik kullanarak bunun önüne geçmiş oluyoruz. 

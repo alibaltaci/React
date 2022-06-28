@@ -8,6 +8,10 @@ label{
   display: block;
 }
 
+.error{
+  color: red;
+}
+
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;
