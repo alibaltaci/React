@@ -79,4 +79,17 @@ cmd --> ``npm install formik --save``
 
 # Radio / Checkbox / Dropdown
 
- 
+## Radio
+
+    <span>Male</span>
+    <input type={"radio"} name='gender' value={"male"} onChange={ handleChange } checked={ values.gender === "male" }/>
+
+    <span>Female</span>
+    <input type={"radio"} name="gender" value={"female"} onChange={ handleChange } checked={ values.gender === "female" } />
+
+- initialValues 'deki gender verisine göre seçili gender getirmek için checked özelliğini kullanmalıyız.
+
+  `` checked={ values.gender === "female" } ``
+
+## Checkbox
+

@@ -19,7 +19,10 @@ function App() {
         email: '',
 
         // radio
-        gender: "male"
+        gender: "male",
+
+        // chackbox
+        hobies: []  // birden fazla seçeneği seçebildiğimiz için tipi array olamak zorunda.
       }}
       
       // onSubmit={async (values) => {
@@ -109,13 +112,34 @@ function App() {
             <br />
             <br />
 
-            { JSON.stringify(values) }
+            {/* checkbox */}
+
+            <div>
+              Football
+              <input type={"checkbox"} name="hobies" value={"Football"} onChange={ handleChange }/>
+            </div>
+
+            <div>
+              Cinema
+              <input type={"checkbox"} name="hobies" value={"Cinema"} onChange={ handleChange } />
+            </div>
+
+            <div>
+              Photography
+              <input type={"checkbox"} name="hobies" value={"Photography"} onChange={ handleChange } />
+            </div>
+
 
             <br />
             <br />
-
 
             <button type="submit">Submit</button>
+
+            <br />
+            <br />
+
+            { JSON.stringify(values) }
+
 
           </form>
 
