@@ -17,6 +17,9 @@ function App() {
         firstName: '',
         lastName: '',
         email: '',
+
+        // radio
+        gender: "male"
       }}
       
       // onSubmit={async (values) => {
@@ -48,7 +51,7 @@ function App() {
 
       {/* With HTML */}
 
-      {
+      {/* {
         ( { handleSubmit, handleChange })  => (
 
           <form onSubmit={ handleSubmit }>
@@ -62,6 +65,54 @@ function App() {
 
             <label htmlFor="email">Email</label>
             <input name='email'  onChange={ handleChange } />
+
+
+            <button type="submit">Submit</button>
+
+          </form>
+
+        )
+      } */}
+
+      {/* Radio / Checkbox / Dropdown */}
+      {
+        ( { handleSubmit, handleChange, values })  => (
+
+          <form onSubmit={ handleSubmit }>
+
+            <label htmlFor="firstName">First Name</label>
+            <input name='firstName'  onChange={ handleChange } />
+
+            <br />
+            <br />
+
+            <label htmlFor="lastName">Last Name</label>
+            <input name='lastName'  onChange={ handleChange } />
+
+            <br />
+            <br />
+
+            <label htmlFor="email">Email</label>
+            <input name='email'  onChange={ handleChange } />
+
+            <br />
+            <br />
+
+            {/* Radio Button */}
+
+            <span>Male</span>
+            <input type={"radio"} name='gender' value={"male"} onChange={ handleChange } checked={ values.gender === "male" }/>
+
+            <span>Female</span>
+            <input type={"radio"} name="gender" value={"female"} onChange={ handleChange } checked={ values.gender === "female" } />
+
+            <br />
+            <br />
+
+            { JSON.stringify(values) }
+
+            <br />
+            <br />
 
 
             <button type="submit">Submit</button>

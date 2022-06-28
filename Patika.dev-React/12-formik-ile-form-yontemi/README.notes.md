@@ -53,3 +53,30 @@ cmd --> ``npm install formik --save``
 - handleChange ile değişimleri tespit eder ve inputları initialValues ile ilişkilendirebiliriz.
 
 - Özelleştirme gerektiren işlemlerde bu yöntemleri uygulamamız gerekebilir.
+
+      {
+        ( { handleSubmit, handleChange })  => (
+
+          <form onSubmit={ handleSubmit }>
+
+            <label htmlFor="firstName">First Name</label>
+            <input name='firstName'  onChange={ handleChange } />
+
+            <label htmlFor="lastName">Last Name</label>
+            <input name='lastName'  onChange={ handleChange } />
+
+
+            <label htmlFor="email">Email</label>
+            <input name='email'  onChange={ handleChange } />
+
+
+            <button type="submit">Submit</button>
+
+          </form>
+
+        )
+      }
+
+# Radio / Checkbox / Dropdown
+
+ 
