@@ -225,6 +225,12 @@ import işlemimizi doğrudan `` import validationSchema from './validations'; ``
       });
 ```
 
+# Kazanımlar 
+
 - yup ve formik farklı kütüphaneler olmasına rağmen enteğre olarak çalışabilmektedirler.
 
+- Formik ile yaptığımız aynı işlemleri state yapısını kullanarak da yapabliriz fakat zaman kaybı, fazla kod, daha fazla efor, yazılan kodun bakımının karmaşık olması gibi dezavantajları vardır.
+
 - Formik veya benzeri çözümleri kullanmamızın bir diğer sebebi de, state kullanarak yaptığınız form kontrollerinde state her değiştiğinde component tekrardan render edilir. Formik kullanarak bunun önüne geçmiş oluyoruz. 
+
+- Formik kullanmak bazen daha maliyetli olabilir. Basik formlarda setState kullanılarak da yapılabilir.
