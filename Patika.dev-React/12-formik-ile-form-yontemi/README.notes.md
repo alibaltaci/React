@@ -138,3 +138,61 @@ Eğer aşağıdaki gibi formik tanımlanırsa `` formik.handleChange `` şeklind
         onSubmit: (values) => {
           console.log(values);
         }
+
+
+# Form Validasyonları - 1
+
+- Validasyon işlemlerini "yup js" ile yapıyoruz.
+
+- Yup gitHub Linki: https://github.com/jquense/yup
+
+Yup Kurulum: cmd --> `` npm i yup ``
+
+- src --> create components folder --> Signup.js
+
+- İşlemlerimizi yukarıdaki dizinde yapalım ve App.js 'ye indirerek bu componentimizi kullanalım.
+
+- components --> create validation.js ( validasyon tanımlarımızı yapacağımız dosya ).
+
+Yup import: validation.js `` import * as yup from "yup" ``
+
+Güncel: `` import { object, string, number, date, InferType } from 'yup'; ``
+
+- indirme işleminden sonra bir şema yazacağız, bu şema sayesinde hangi imputlarımızın hangi kurallara tabi olduğunu belirtebiliyoruz.
+
+Şema:
+
+    let userSchema = object({
+      name: string().required(),
+      age: number().required().positive().integer(),
+      email: string().email(),
+      website: string().url().nullable(),
+      createdOn: date().default(() => new Date()),
+    });
+
+`` required() `` zorunlu alan.
+`` min() - max() `` karakter sayısı belirtmek için.
+
+...
+
+- validasyon dosyamızı Signup.js 'ye indirdikten sonra useFomik altında bulunan `` validationSchema `` adındaki özelliğimize indirdiğimiz `` validasyon `` işlemlerini verebiliriz.
+
+      const {handleChange, handleSubmit, values} = useFormik({
+        initialValues: {
+          email: "",
+          password: "",
+          passwordConfirm: ""
+        },
+    
+        onSubmit: (values) => {
+          console.log(values);
+        },
+
+        validationSchema: validations
+      });
+
+import işlemimizi doğrudan `` import validationSchema from './validations'; `` şeklinde yaparsak `` validationSchema `` yazmamız da yeterli olacaktır.
+
+- Doğru eşleştirme için initialVales 'deki keyler ile şemadaki keyler aynı olmalıdır.
+
+

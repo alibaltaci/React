@@ -7,7 +7,7 @@ import './App.css';
 // import { Formik } from "formik";
 
 // useFormik
-import { Formik, useFormik } from "formik";
+// import { Formik, useFormik } from "formik";
 
 // function App() {
 //   return (
@@ -171,105 +171,122 @@ import { Formik, useFormik } from "formik";
 
 // useFormik
 
+// function App() {
+
+//   // const formik = useFormik({
+//   const {handleChange, handleSubmit, values} = useFormik({
+//     initialValues: {
+//       firstName: "",
+//       lastName: "",
+//       email: "",
+//       gender: "male",
+//       hobbies: [],
+//       country: ""
+//     },
+
+//     onSubmit: (values) => {
+//       console.log(values);
+//     }
+//   });
+
+//   return (
+//     <div className="App">
+
+//     <h1>Sign Up</h1>
+
+//           <form onSubmit={ handleSubmit }>
+
+//             <label htmlFor="firstName">First Name</label>
+//             {/* handleChange ve diğer özellikler sadece const formik oluşturularak aşağıdaki gibi de alınabilir. */}
+//             {/* <input name='firstName'  onChange={ formik.handleChange } /> */}
+//             <input name='firstName'  onChange={ handleChange } />
+
+//             <br />
+//             <br />
+
+//             <label htmlFor="lastName">Last Name</label>
+//             <input name='lastName'  onChange={ handleChange } />
+
+//             <br />
+//             <br />
+
+//             <label htmlFor="email">Email</label>
+//             <input name='email'  onChange={ handleChange } />
+
+//             <br />
+//             <br />
+
+//             {/* Radio Button */}
+
+//             <span>Male</span>
+//             <input type={"radio"} name='gender' value={"male"} onChange={ handleChange } checked={ values.gender === "male" }/>
+
+//             <span>Female</span>
+//             <input type={"radio"} name="gender" value={"female"} onChange={ handleChange } checked={ values.gender === "female" } />
+
+//             <br />
+//             <br />
+
+//             {/* checkbox */}
+
+//             <div>
+//               Football
+//               <input type={"checkbox"} name="hobies" value={"Football"} onChange={ handleChange }/>
+//             </div>
+
+//             <div>
+//               Cinema
+//               <input type={"checkbox"} name="hobies" value={"Cinema"} onChange={ handleChange } />
+//             </div>
+
+//             <div>
+//               Photography
+//               <input type={"checkbox"} name="hobies" value={"Photography"} onChange={ handleChange } />
+//             </div>
+
+
+//             <br />
+//             <br />
+
+//             {/* Dropdown */}
+
+//             <select name='country' value={values.country} onChange={ handleChange }>
+//               {/* <option></option> */}
+//               <option value={"tr"}>Turkey</option>
+//               <option value={"en"}>England</option>
+//               <option value={"usa"}>USA</option>
+//             </select>
+//             <br />
+//             <br />
+
+//             <button type="submit">Submit</button>
+
+//             <br />
+//             <br />
+
+//             { JSON.stringify(values) }
+
+
+//           </form>
+   
+//     </div>
+//   )
+// }
+
+
+// Form Validations
+
+import Signup from './components/Signup';
+
 function App() {
-
-  // const formik = useFormik({
-  const {handleChange, handleSubmit, values} = useFormik({
-    initialValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      gender: "male",
-      hobbies: [],
-      country: ""
-    },
-
-    onSubmit: (values) => {
-      console.log(values);
-    }
-  });
 
   return (
     <div className="App">
 
-    <h1>Sign Up</h1>
-
-          <form onSubmit={ handleSubmit }>
-
-            <label htmlFor="firstName">First Name</label>
-            {/* handleChange ve diğer özellikler sadece const formik oluşturularak aşağıdaki gibi de alınabilir. */}
-            {/* <input name='firstName'  onChange={ formik.handleChange } /> */}
-            <input name='firstName'  onChange={ handleChange } />
-
-            <br />
-            <br />
-
-            <label htmlFor="lastName">Last Name</label>
-            <input name='lastName'  onChange={ handleChange } />
-
-            <br />
-            <br />
-
-            <label htmlFor="email">Email</label>
-            <input name='email'  onChange={ handleChange } />
-
-            <br />
-            <br />
-
-            {/* Radio Button */}
-
-            <span>Male</span>
-            <input type={"radio"} name='gender' value={"male"} onChange={ handleChange } checked={ values.gender === "male" }/>
-
-            <span>Female</span>
-            <input type={"radio"} name="gender" value={"female"} onChange={ handleChange } checked={ values.gender === "female" } />
-
-            <br />
-            <br />
-
-            {/* checkbox */}
-
-            <div>
-              Football
-              <input type={"checkbox"} name="hobies" value={"Football"} onChange={ handleChange }/>
-            </div>
-
-            <div>
-              Cinema
-              <input type={"checkbox"} name="hobies" value={"Cinema"} onChange={ handleChange } />
-            </div>
-
-            <div>
-              Photography
-              <input type={"checkbox"} name="hobies" value={"Photography"} onChange={ handleChange } />
-            </div>
-
-
-            <br />
-            <br />
-
-            {/* Dropdown */}
-
-            <select name='country' value={values.country} onChange={ handleChange }>
-              {/* <option></option> */}
-              <option value={"tr"}>Turkey</option>
-              <option value={"en"}>England</option>
-              <option value={"usa"}>USA</option>
-            </select>
-            <br />
-            <br />
-
-            <button type="submit">Submit</button>
-
-            <br />
-            <br />
-
-            { JSON.stringify(values) }
-
-
-          </form>
+      <Signup />
    
     </div>
   )
 }
+
 export default App;
