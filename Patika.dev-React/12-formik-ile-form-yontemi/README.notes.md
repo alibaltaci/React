@@ -99,3 +99,42 @@ cmd --> ``npm install formik --save``
       <option value={"en"}>England</option>
       <option value={"usa"}>USA</option>
     </select>
+
+
+# useFormik
+
+- Daha sade işlemler için kullanılabilir.
+
+- Callback (handleSubmit/Change) işlemlerinden kurtulabiliriz.
+
+initialValues ve onSubit  useFormik yardımıyla aşağıdaki gibi oluşturulabilir.
+
+      const {handleChange, handleSubmit, values} = useFormik({
+        initialValues: {
+          firstName: "",
+          lastName: "",
+          email: "",
+          gender: "male",
+          hobbies: [],
+          country: ""
+        },
+
+        onSubmit: (values) => {
+          console.log(values);
+        }
+
+Eğer aşağıdaki gibi formik tanımlanırsa `` formik.handleChange `` şeklinde de özellikler alınabilir.
+
+      const formik = useFormik({
+        initialValues: {
+          firstName: "",
+          lastName: "",
+          email: "",
+          gender: "male",
+          hobbies: [],
+          country: ""
+        },
+
+        onSubmit: (values) => {
+          console.log(values);
+        }
