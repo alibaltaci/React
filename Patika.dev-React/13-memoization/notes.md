@@ -4,6 +4,8 @@
 
 # React.memo
 
+https://tsafaelmali.medium.com/react-memoization-nedir-reactta-nas%C4%B1l-kullan%C4%B1l%C4%B1r-453035a3630f
+
 src --> create components folder --> Header.js
 
 - Çalışmamaızda Header componentimiz sabit kalacağı için yeniden render edilmemesi lazım. Fakat ediliyor. Yenien render edilmesinin sebebi, buttona her bastığımzda App fonksiyonu yenien render edildiği için ve Header componentimiz de App içinde olduğu için yeniden render edilir.
@@ -195,3 +197,50 @@ function App() {
   return {name: "Ali", number};
 };
  ```
+
+ # useCallback
+
+ - create Callback.js
+
+ - create CallbackHeader.js (src --> components)
+
+ - Click butonumuzu CallbackHeader.js 'ye taşıyalım ve artırma işlemini orada yapmaya çalışalım.
+
+ - Artırma işlemini CallbackHeader 'da yapamayacağımız için bu hesaplmayı Callback.js 'de yapıp sonucu prop olarak CallbackHeader 'a gönderebiliriz.
+
+ `` <CallbackHeader increment={() => setNumber( number + 1 )} /> ``
+
+ `` <button onClick={increment} >Click</button> ``
+
+ - Bu defa CallbackHeader sürekli değiştiği için başlık sürekli render edilecek.
+
+ - Bu durumdan kurtulmak için useCallback Hook 'unu kullanacağız.
+
+ `` import {useCallback} from "react"; ``
+
+ ``` 
+const increment = useCallback( () => {
+    setNumber( number + 1 );
+}, []);
+ ```
+
+ `` <CallbackHeader increment={increment} /> ``
+
+ - Bu işlemlerde dependency arraye number ifadesi vermezsek sürekli 1 artırır ve eski değerine döner. Yani Click butonuna ne kadar basarsak basalım değerimiz sürekli 1 olarak render edilir.
+
+ - Doğru kullanımı aşağıdaki gibidir.
+
+ ``` 
+const increment = useCallback( () => {
+    setNumber( number + 1 );
+}, [number]);
+ ```
+- Değişen değer Callback 'de olmasına rağmen tekrardan CallbackHeader 'da sürekli render edilme sıkıntısı ile karşılaşıyoruz. Bunun sebebi number her değiştiğinde setNumber fonksiyonu baştan tanımlanmasıdır. Header componentinde başka bir prop varmış gibi algılanır.
+
+- number 'dan kurtulalım ve işlemlerimizi prevState ile yapalım.
+
+
+
+
+
+
