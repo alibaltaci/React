@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Car from './Car';
 import reportWebVitals from './reportWebVitals';
-
-import Callback from './Callback';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-
-    <Callback />
+    <Car />
   </React.StrictMode>
 );
 
