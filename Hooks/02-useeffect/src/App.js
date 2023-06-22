@@ -1,32 +1,37 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 
 function App() {
 
-  const [car, setCar] = useState({
-    brand: 'Ford',
-    model: 'Mustang',
-    year: '1964',
-    color: 'red'
-  })
+  const [count, setCount] = useState(0);
+  const [counter, setCounter] = useState(0);
 
-  const updateColor = () => {
-      setCar( previousState => {
-        return {
-          ...previousState, color: 'blue'
-        }
-      })
+  const up = () => {
+    setCount( (count) => count + 1 )
   }
 
+  const down = () => {
+    setCount( (count) => count - 1 )
+  }
+
+  useEffect( () => {
+    setCounter( () => count * 2);
+  }, [count] );
 
   return (
     <Fragment>
-      <h1>My {car.brand} </h1>
-      <p>It is a {car.color} {car.model} from {car.year} </p>
+    
+      <p>Count: {count}</p>
+    
       <button
-        onClick={updateColor}
-      >
-        Blue
-      </button>
+        onClick={ () => up() }
+      >+</button>
+
+      <button
+        onClick={ () => down() }
+      >-</button>
+
+      <p>Counter: {counter}</p>
+    
     </Fragment>
 
   );
