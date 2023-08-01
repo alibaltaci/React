@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import Counter from './components/counter';
 
 function App() {
 
@@ -27,6 +28,8 @@ function App() {
       <input ref={inputRef} placeholder="Giriş..."/>
       <button onClick={onFocusButton}>Input'a Focus Ol!</button>
       <button onClick={onBorderDiv}>{ border? "Border'ı kaldır!" : "Border Ekle!"} </button>
+
+      <Counter />
     </div>
   );
 }
