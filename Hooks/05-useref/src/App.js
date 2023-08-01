@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import Counter from './components/counter';
+import Form from './components/form';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <button onClick={onBorderDiv}>{ border? "Border'ı kaldır!" : "Border Ekle!"} </button>
 
       <Counter />
+      <Form />
     </div>
   );
 }
