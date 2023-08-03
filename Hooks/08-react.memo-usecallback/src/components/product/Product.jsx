@@ -1,8 +1,9 @@
+import React from "react";
 import Button from "../ui/Button/Button";
 import Typography from "../ui/Typography/Typography";
 import { StyledProduct } from "./Product.styled";
 
-export default function Product( {name, price, addToCart} ){
+export default React.memo( function Product ( {name, price, index, addToCart, removeFromCart} ){
 
     return(
         <StyledProduct>
@@ -10,11 +11,14 @@ export default function Product( {name, price, addToCart} ){
             <Typography text={ `${price.toLocaleString()} tl` } elementType='h3' />
             {
                 addToCart && (
-                    <>
                         <Button onClick={()=> addToCart({name,price})} text='Sepete Ekle' variant='green' />
-                    </>
+                )
+            }
+            {
+                removeFromCart && (
+                        <Button onClick={() => removeFromCart({price},index) }  text='Kaldır' variant='danger' />
                 )
             }
         </StyledProduct>
     )
-}
+})

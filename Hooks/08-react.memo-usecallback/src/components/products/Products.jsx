@@ -1,8 +1,9 @@
+import React from "react";
 import Product from "../product/Product";
 import Typography from "../ui/Typography/Typography";
 import { StyledProducts } from "./Products.styled";
 
-export default function Products({products, addToCart}){
+export default React.memo( function Products({products, addToCart}){
 
     return(
         <>
@@ -14,4 +15,4 @@ export default function Products({products, addToCart}){
             </StyledProducts>
         </>
     )
-}
+})

@@ -6,11 +6,11 @@ const StyledButton = styled.button`
     padding: 5px 10px;
     cursor:  pointer;
     border-radius: 4px;
+    color: white;
 `
 
 export const StyledButtonPrimary = styled(StyledButton)`
     background-color: blue;
-    color: white;
     border: 1px solid blue;
 
     &:hover,
@@ -24,7 +24,6 @@ export const StyledButtonPrimary = styled(StyledButton)`
 
 export const StyledButtonSecondary = styled(StyledButton)`
      background-color: green;
-     color: white;
      border: 1px solid green;
 
      &:hover,
@@ -33,5 +32,18 @@ export const StyledButtonSecondary = styled(StyledButton)`
         background-color: white;
         border: 1px solid green;
         color: green;
+     }
+`
+
+export const StyledButtonDanger = styled(StyledButton)`
+     background-color: red;
+     border: 1px solid red;
+
+     &:hover,
+     &:focus,
+     &:active{
+        background-color: white;
+        border: 1px solid red;
+        color: red;
      }
 `
