@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './App.css';
-import Products from './components/Products';
-import Cart from './components/Cart';
+import Products from './components/products/Products';
+import Cart from './components/cart/Cart';
+import Wrapper from './components/ui/Wrapper/Wrapper';
 
 const phones = [
   { name: "iPhone 12", price: 14000},
@@ -22,10 +23,10 @@ function App() {
     setCart([])
   }
   return (
-    <div className="App">
+    <Wrapper>
       <Products products={products} addToCart={addToCart} />
       <Cart cart={cart} emptyCart={emptyCart} />
-    </div>
+    </Wrapper>
   );
 }
 
