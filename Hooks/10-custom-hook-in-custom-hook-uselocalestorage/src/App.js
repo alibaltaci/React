@@ -8,6 +8,8 @@ function App() {
   return ( 
     <div className="App">
       <h1>Custom Hook Nasıl Yazılır?</h1>
+      <h2>Custom Hook in Custom Hook</h2>
+      <h2>useLocalStorage</h2>
       
       <form>
         <label htmlFor="name">
