@@ -3,7 +3,14 @@ import { useInput } from "./hooks/useInput";
 
 function App() {
 
-  const [inputs, setInputs] = useInput({name:"", age:"", email:""})
+  const INITIAL_STATE = {
+    name:"", 
+    age:"", 
+    email:"", 
+    question:""
+  }
+  
+  const [inputs, setInputs] = useInput('inputs', INITIAL_STATE)
 
   return ( 
     <div className="App">
@@ -20,6 +27,9 @@ function App() {
         </label>
         <label htmlFor="email">
           Email: <input name="email" value={inputs.email} onChange={ setInputs } />
+        </label>
+        <label htmlFor="Security Question">
+          Cat's Name: <input name="question" value={inputs.question} onChange={ setInputs } />
         </label>
       </form>
     </div>
