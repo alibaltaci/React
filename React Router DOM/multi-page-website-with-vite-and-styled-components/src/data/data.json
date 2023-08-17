@@ -1,0 +1,71 @@
+{
+    "navbar":[
+        {
+            "content":"Home",
+            "page":"home",
+            "path":"/"
+        },
+        {
+            "content":"About",
+            "page":"about",
+            "path":"/about"
+        },
+        {
+            "content":"Services",
+            "page":"services",
+            "path":"/services"
+        },
+        {
+            "content":"Contact",
+            "page":"contact",
+            "path":"/contact"
+        },
+        {
+            "content":"404",
+            "page":"page404",
+            "path":"/*"
+        },
+        {
+            "content":"Blog",
+            "page":"bloglayout",
+            "path":"/blog",
+            "sub":[
+                {
+                    "content":"Blog",
+                    "page":"blog",
+                    "index": true
+                },
+                {
+                    "content":"Catagories",
+                    "page":"catagories",
+                    "path": "catagories"
+                },
+                {
+                    "content":"Post",
+                    "page":"post",
+                    "path": "post/:url"
+                }
+            ]
+        }
+    ],
+    
+    "blogPage":{
+        "posts":[
+            {
+                "title": "Post-1",
+                "detail": "Post-1 detail content",
+                "path": "post1"
+            },
+            {
+                "title": "Post-2",
+                "detail": "Post-2 detail content",
+                "path": "post2"
+            },
+            {
+                "title": "Post-3",
+                "detail": "Post-3 detail content",
+                "path": "post3"
+            }
+        ]
+    }
+}
