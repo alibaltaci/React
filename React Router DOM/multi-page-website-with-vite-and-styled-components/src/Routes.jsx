@@ -15,45 +15,55 @@ import Page404 from "./pages/Page404";
 
 const routes = [
     {
+        name: 'home',
         path:'/',
         element: <HomeLayout />,
         children: [
             {
+                name: 'index',
                 index: true,
                 element: <Home />
             },
             {
+                name: 'contact',
                 path: 'contact',
                 element: <Contact />
             },
             {
+                name: 'services',
                 path: 'services',
                 element: <Services />
             },
             {
+                name: 'about',
                 path: 'about',
                 element: <About />
             },
             {
+                name: 'blog',
                 path: 'blog',
                 element: <BlogLayout />,
                 auth: true,
                 children: [
                     {
+                        name: 'index',
                         index: true,
                         element: <Blog />
                     },
                     {
+                        name: 'catagories',
                         path: 'catagories',
                         element: <Catagories />
                     },
                     {
+                        name: 'post',
                         path: 'post/:url',
                         element: <Post />
                     }
                 ]
             },
             {
+                name: 'profile',
                 path: 'profile',
                 // element:<PrivateRoute><Profile /></PrivateRoute>,
                 element: <Profile />,
@@ -62,16 +72,19 @@ const routes = [
         ]
     },
     {
-        path : '/auth',
+        name: '/auth',
+        path: '/auth',
         element: <AuthLayout />,
         children:[
             {
+                name: 'login',
                 path: 'login',
                 element: <Login />
             }
         ]
     },
     {
+        name:'notFound',
         path:'/*',
         element: <Page404 />
     }

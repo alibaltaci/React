@@ -1,13 +1,28 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useSearchParams } from 'react-router-dom'
 import { blogPage } from "../../data/data.json"
+import { url } from '../../utils'
 
 
 function Blog() {
+
+    const [ searchParams, setSearchParams ] = useSearchParams() // JS 'deki searchParams ile aynı
+    
+    const [ search, setSearch ] = useState( searchParams.get('search') || '')
+
+    useEffect( () => {
+        searchParams.set('search', search)
+
+        if(!search){
+            searchParams.delete('search')
+        }
+        setSearchParams(Object.fromEntries( [...searchParams] ))
+    }, [search])
     
   return (
     <div>
         <div>Blog</div>
+        <input type='text' defaultValue={search} onChange={ e => setSearch(e.target.value) } />
         <div>
             <ul>
                 <li>
@@ -22,7 +37,13 @@ function Blog() {
             </ul>
             {
                 blogPage.posts.map( (post) => (
-                    <Link key={post.path} to={`post/${post.path}`}>{ post.title }</Link>
+                    
+                    // <Link key={post.path} to={`post/${post.path}`}>{ post.title }</Link>
+
+                    <Link key={post.path} to={ url('home.blog.post', {
+                        url: post.path
+                    }) }>{ post.title }</Link>
+
                     ))
                 }
             {/* <Link to='./post/post1' >Post-1</Link>

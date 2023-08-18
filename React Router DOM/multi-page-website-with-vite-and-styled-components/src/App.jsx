@@ -1,8 +1,8 @@
 import { useRoutes } from 'react-router-dom'
 import './App.css'
-import data from './Routes'
-
-
+import routes from './Routes'
+import { url } from './utils'
+ 
 // Routes
 // Route - path/element
 // NavLink
@@ -27,7 +27,15 @@ import data from './Routes'
 
 function App() {
 
-  return useRoutes( data )
+  // url('home.blog.catagories')
+
+  // console.log(  url('home.blog.post', {
+  //   url: 'test'
+  // }))
+
+  console.log(url('home.blog.catagories'))
+
+  return useRoutes( routes )
 
 }
 

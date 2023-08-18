@@ -3,22 +3,22 @@
         {
             "content":"Home",
             "page":"home",
-            "path":"/"
+            "path":"home"
         },
         {
             "content":"About",
             "page":"about",
-            "path":"about"
+            "path":"home.about"
         },
         {
             "content":"Services",
             "page":"services",
-            "path":"services"
+            "path":"home.services"
         },
         {
             "content":"Contact",
             "page":"contact",
-            "path":"contact"
+            "path":"home.contact"
         },
         {
             "content":"404",
@@ -28,7 +28,7 @@
         {
             "content":"Blog",
             "page":"bloglayout",
-            "path":"blog",
+            "path":"home.blog",
             "sub":[
                 {
                     "content":"Blog",
@@ -38,19 +38,19 @@
                 {
                     "content":"Catagories",
                     "page":"catagories",
-                    "path": "catagories"
+                    "path": "home.blog.catagories"
                 },
                 {
                     "content":"Post",
                     "page":"post",
-                    "path": "post/:url"
+                    "path": "home.blog.post/:url"
                 }
             ]
         },
         {
             "content":"Profile",
             "page":"profile",
-            "path":"profile"
+            "path":"home.profile"
         }
     ],
     
