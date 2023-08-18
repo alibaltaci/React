@@ -7,7 +7,7 @@ import Login from './pages/Auth/Login'
 
 
 // Routes
-// Route
+// Route - path/element
 // NavLink
 // Link
 
@@ -17,10 +17,12 @@ import Login from './pages/Auth/Login'
 // 404
 
 // <Navigate />
-// useNavigate
+// useNavigate()
 // Private Route
+// replate - true/false  (önceki sayfaya dönüş için)
 
-// useLocation()
+// useLocation()  search/pathname/state
+
 // useRoutes()
 // useSearchParams()
 // generalePath()

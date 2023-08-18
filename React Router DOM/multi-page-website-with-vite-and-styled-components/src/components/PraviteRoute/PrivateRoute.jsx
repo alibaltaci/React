@@ -18,6 +18,7 @@ function PrivateRoute() {
         // kullanıcıyı geldiği sayfaya yönlendirmek için
         return(
           <Navigate to="/auth/login"  
+            replace={true}
             state={{
               return_url: location.pathname
             }}
