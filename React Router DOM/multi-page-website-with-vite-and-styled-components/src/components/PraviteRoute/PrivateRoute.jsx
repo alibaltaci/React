@@ -1,13 +1,13 @@
 import React from 'react'
 import Profile from '../../pages/Profile'
 import { useAuth } from '../../context/AuthContext'
-import { Navigate, useLocation } from 'react-router-dom'
+import { Navigate, Outlet, useLocation } from 'react-router-dom'
 
 // Kullanıcı oturum açmış mı?
 // Eğer oturum açmamış ise yönlendirme işleme.
 // Eğer oturumu açmışsa children'ı return et.
 
-function PrivateRoute() {
+function  PrivateRoute() {
 
     const { user } = useAuth()
 
@@ -30,7 +30,7 @@ function PrivateRoute() {
 
     <>
         <div>PrivateRoute</div>
-        <Profile />
+        <Outlet />
     </>
   )
 }

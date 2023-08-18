@@ -31,7 +31,7 @@ function PageReturner({page}) {
         ? Catagories
         : page === "post"
         ? Post
-        : page === "privateRoute"
+        : page === "profile"
         ? PrivateRoute
         : Page404
         

@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { blogPage } from "../../data/data.json"
+
+
 function Blog() {
+    
   return (
     <div>
         <div>Blog</div>

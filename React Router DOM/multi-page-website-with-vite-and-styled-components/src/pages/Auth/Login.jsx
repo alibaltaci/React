@@ -16,7 +16,12 @@ function Login() {
     })
 
     // navigate("/")
-    navigate( location?.state?.return_url || "/" )
+    navigate( location?.state?.return_url || "/", {
+      replace: true,
+      state:{
+        name: "Ali"
+      }
+    } )
 
   }
 

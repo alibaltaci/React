@@ -23,7 +23,7 @@
         {
             "content":"404",
             "page":"page404",
-            "path":"*"
+            "path":"/*"
         },
         {
             "content":"Blog",
@@ -49,8 +49,8 @@
         },
         {
             "content":"Profile",
-            "page":"privateRoute",
-            "path":"privateroute"
+            "page":"profile",
+            "path":"profile"
         }
     ],
     
