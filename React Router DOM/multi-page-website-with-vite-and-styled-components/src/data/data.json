@@ -8,27 +8,27 @@
         {
             "content":"About",
             "page":"about",
-            "path":"/about"
+            "path":"about"
         },
         {
             "content":"Services",
             "page":"services",
-            "path":"/services"
+            "path":"services"
         },
         {
             "content":"Contact",
             "page":"contact",
-            "path":"/contact"
+            "path":"contact"
         },
         {
             "content":"404",
             "page":"page404",
-            "path":"/*"
+            "path":"*"
         },
         {
             "content":"Blog",
             "page":"bloglayout",
-            "path":"/blog",
+            "path":"blog",
             "sub":[
                 {
                     "content":"Blog",
@@ -46,6 +46,11 @@
                     "path": "post/:url"
                 }
             ]
+        },
+        {
+            "content":"Profile",
+            "page":"privateRoute",
+            "path":"privateroute"
         }
     ],
     

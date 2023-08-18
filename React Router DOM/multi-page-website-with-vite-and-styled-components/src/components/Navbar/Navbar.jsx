@@ -11,7 +11,11 @@ function Navbar() {
                 navbar.map( (data) => (
                     data.page !== "page404" &&(
                             <li key={data.path} >
-                                <NavLink  to={data.path}>{data.content}</NavLink>
+                                <NavLink  to={data.path}   
+                                    style={ ({isActive}) => ({
+                                        backgroundColor: isActive ? "red" : "transparent"
+                                    })}
+                                >{data.content}</NavLink>
                             </li>
                     )
                 ) )

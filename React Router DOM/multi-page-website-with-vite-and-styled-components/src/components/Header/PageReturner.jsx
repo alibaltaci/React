@@ -8,10 +8,14 @@ import BlogLayout from '../../pages/Blog/BlogLayout'
 import Blog from '../../pages/Blog/Blog'
 import Catagories from '../../pages/Blog/catagories'
 import Post from '../../pages/Blog/Post'
+import PrivateRoute from '../../components/PraviteRoute/PrivateRoute'
+import HomeLayout from '../../pages/HomeLayout'
 
 function PageReturner({page}) {
 
-    const Page = page === "home" 
+    const Page = page === "homeLayout"
+        ? HomeLayout
+        : page === "home" 
         ? Home 
         : page === "about"
         ? About
@@ -27,6 +31,8 @@ function PageReturner({page}) {
         ? Catagories
         : page === "post"
         ? Post
+        : page === "privateRoute"
+        ? PrivateRoute
         : Page404
         
   return (

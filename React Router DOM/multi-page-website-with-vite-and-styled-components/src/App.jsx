@@ -1,25 +1,62 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
 import { navbar } from './data/data.json'
 import PageReturner from './components/Header/PageReturner'
+import AuthLayout from './pages/Auth/AuthLayout'
+import Login from './pages/Auth/Login'
 
 
 // Routes
 // Route
 // NavLink
 // Link
+
 // <Outlet />
 // useParams()
+
+// 404
+
+// <Navigate />
+// useNavigate
+// Private Route
+
+// useLocation()
+// useRoutes()
+// useSearchParams()
+// generalePath()
+
 
 function App() {
 
   return (
     <>
-      <Header />
       <Routes>
-        {
+
+        <Route path="/" element={ <PageReturner page="homeLayout" /> }>
+          <Route index={true} element={ <PageReturner page="home" /> } />
+          <Route path='contact' element={ <PageReturner page="contact" /> } />
+          <Route path='services' element={ <PageReturner page="services" /> } />
+          <Route path='about' element={ <PageReturner page="about" /> } />
+          <Route path='blog' element={ <PageReturner page="bloglayout" /> } >
+            <Route index={true} element={<PageReturner page="blog" /> } />
+            <Route path='catagories' element={ <PageReturner page="catagories" /> } />
+            <Route path='post/:url' element={ <PageReturner page="post" /> } />
+          </Route>
+          <Route path='*' element={ <PageReturner page="page404" /> } />
+          <Route path='privateRoute' element={ <PageReturner page="privateRoute" /> } />
+        </Route>
+        <Route path='/auth' element={ <AuthLayout /> } >
+          <Route path='login' element={ <Login /> } />
+        </Route>
+
+      </Routes>
+    </>
+  )
+}
+
+export default App
+
+        {/* {
           navbar.map( (data) => (
             // data.sub
             // ? <Route key={data.path} element={ <PageReturner page={data.page} /> }>
@@ -34,21 +71,4 @@ function App() {
             // : 
             <Route key={data.path} path={data.path} element={ <PageReturner page={data.page} />} />
           ))
-        }
-        <Route path='/blog' element={ <PageReturner page="bloglayout" /> } >
-          <Route index={true} element={<PageReturner page="blog" /> } />
-          <Route path='catagories' element={ <PageReturner page="catagories" /> } />
-          <Route path='post/:url' element={ <PageReturner page="post" /> } />
-        </Route>
-        {/* <Route path='/*' element={ <Page404 /> } /> */}
-        {/* <Route path='/'  element={ <Home /> } />
-        <Route path='/about'  element={ <About /> } />
-        <Route path='/services'  element={ <Services /> } />
-        <Route path='/contact'  element={ <Contact /> } /> */}
-      </Routes>
-      <Footer />
-    </>
-  )
-}
-
-export default App
+        } */}
