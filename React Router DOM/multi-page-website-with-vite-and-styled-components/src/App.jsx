@@ -16,13 +16,13 @@ import { url } from './utils'
 // <Navigate />
 // useNavigate()
 // Private Route
-// replate - true/false  (önceki sayfaya dönüş için)
+// replace - true/false  (önceki sayfaya dönüş için)
 
 // useLocation()  search/pathname/state
 
 // useRoutes()
 // useSearchParams()
-// generalePath()
+// generatePath()
 
 
 function App() {

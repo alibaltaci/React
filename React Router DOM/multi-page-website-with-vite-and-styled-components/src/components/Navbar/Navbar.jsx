@@ -1,9 +1,6 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { navbar } from '../../data/data.json'
 import { url } from '../../utils'
-
-import routes from '.././../Routes'
 
 function Navbar() {
 
